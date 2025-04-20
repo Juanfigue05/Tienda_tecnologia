@@ -59,7 +59,7 @@ header{
     background-color:rgba(0, 0, 0, 0.319);
 }
 
-#boton_iniciar_sesion{
+#boton_navegador{
     margin-top: 0.2em;
     color: rgba(255, 255, 255, 0.705);
     font-size: 0.8em;
@@ -68,7 +68,7 @@ header{
     border: 2px solid gold;
 }
 
-#boton_iniciar_sesion:hover{
+#boton_navegador:hover{
     color: gold;
     background-color:black;
     border-radius: 10px;
