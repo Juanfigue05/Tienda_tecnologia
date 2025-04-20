@@ -10,7 +10,6 @@ else {
     
 }
 
-
 const tarjetas = document.querySelectorAll(".card");
 
 if (tarjetas.length > 0) {
@@ -20,6 +19,8 @@ if (tarjetas.length > 0) {
             if (valor) {
                 console.log("Valor del div clickeado:", valor);
                 localStorage.setItem("valorDiv_carta", valor);
+                // Redirigir a otra página
+                window.location.href = "productos.html";
             } else {
                 console.log("El div no tiene un atributo 'data-value'.");
             }

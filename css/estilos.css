@@ -48,21 +48,27 @@ header{
     margin: 0 auto;
 }
 
-
 #opcion_navegador{
-    color: gold;
+    color: rgb(179, 153, 9);
     font-weight: bold;
     border-radius: 10px;
 }
 
+#opcion_navegador:hover{
+    color: gold;
+    background-color:rgba(0, 0, 0, 0.319);
+}
 
-#boton_contacto{
-    color: rgba(0, 0, 0, 0.705);
+#boton_iniciar_sesion{
+    margin-top: 0.2em;
+    color: rgba(255, 255, 255, 0.705);
+    font-size: 0.8em;
     font-weight: bold;
     border-radius: 10px;
     border: 2px solid gold;
 }
-#boton_contacto:hover{
+
+#boton_iniciar_sesion:hover{
     color: gold;
     background-color:black;
     border-radius: 10px;

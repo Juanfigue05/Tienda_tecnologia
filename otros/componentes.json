@@ -1,13 +1,13 @@
 {
     "componentes": [
       {
-        "tipo": "Camara web hd",
-        "marca": "Logitech",
-        "modelo": "C920",
-        "conexion": "USB",
-        "fecha_creacion": "2012",
-        "precio": 250000,
-        "img": "https://resource.logitech.com/content/dam/logitech/en/products/webcams/c920/gallery/c920-gallery-1.png"
+          "tipo": "Camara web hd",
+          "marca": "Logitech",
+          "modelo": "C920",
+          "conexion": "USB",
+          "fecha_creacion": "2012",
+          "precio": 250000,
+          "img": "https://resource.logitech.com/content/dam/logitech/en/products/webcams/c920/gallery/c920-gallery-1.png"
       },
       {
         "tipo": "Camara web hd",
