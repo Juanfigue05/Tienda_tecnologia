@@ -5,14 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="icon" href="img/icono.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Tecnology Shop</title>
 </head>
 <body>
-    
+    <header>
+        <div>
+            <img src="img/logotipo.png" id="logotipo" alt="Logo" class="d-inline-block align-text-top">
+            <h1>Bienvenido a la Administracion</h1>
+        </div>
+    </header>
+    <div class="container">
+        <button class="btn" id="boton_navegador_dashboard">Ingresar Inventario</button>
+        <button class="btn" id="boton_navegador_dashboard">Consultar Inventrio</button>
+        <button class="btn" id="boton_navegador_dashboard">Informe de ventas</button>
+    </div>
+
+    <div id="ingresar_inventario">
+        <form action="">
+            <div class="container">
+                <h2>Ingresar Inventario</h2>
+                <div class="mb-3">
+                    <label for="producto" class="form-label">Nombre del producto</label>
+                    <select name="" id="producto" class="form-control">
+                        <option value="" disabled>Seleccione el producto</option>
+                        <div id="productos_json"></div>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="cantidad_producto" class="form-label">Cantidad</label>
+                    <input type="number" class="form-control" id="cantidad_producto" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Agregar Producto</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="consultar_inventario">
+        <div class="container">
+            <h2>Consultar Inventario</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Tipo</th>
+                        <th>Nombre Producto</th>
+                        <th>Cantidad</th>
+                        <th>Especificaciones</th>
+                        <th>Precio</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="inventario_tabla">
+                    <!-- Aquí se llenarán las filas de la tabla con JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="informe_ventas">
+            
+            <div class="container">
+                <h2>Informe de Ventas</h2>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Producto</th>
+                            <th>Cantidad Vendida</th>
+                        </tr>
+                    </thead>
+                    <tbody id="informe_ventas_tabla">
+                        <!-- Aquí se llenarán las filas de la tabla con JavaScript -->
+                    </tbody>
+                </table>
+                <p>Total Ganancias:</p><p id="total_ganancia"></p>
+            </div>
+    </div>
+
+
 
     
-    <script src="js/principal.js"></script>
+    <script src="js/dashboard.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 </body>
 </html>
