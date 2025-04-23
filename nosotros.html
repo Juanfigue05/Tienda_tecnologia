@@ -1,44 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="icon" href="img/icono.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Tecnology Shop</title>
 </head>
 <body >
     <header>
-        <nav id="navegador" class="navbar navbar-expand-md">
-            <div class="container-fluid">
-                <a class="navbar-brand"><img src="img/logotipo.png" id="logotipo" alt="Logo" class="d-inline-block align-text-top"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="nav nav-underline ms-auto" id="navegador_opciones">
-                        <li class="nav-item">
-                        <a class="nav-link" id="opcion_navegador" href="index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" id="opcion_navegador" href="productos.html">Productos</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link active" id="opcion_seleccionada" aria-current="page" href="nosotros.html">Sobre nosotros</a>
-                        </li>
-                        <li>
-                          <a href="dashboard.html" id="boton_navegador" class="btn btn-dark">Iniciar Sesion</a>
-                        </li>
-                        <li id="carrito_compra">
-                          <a href="dashboard.html" id="boton_navegador" class="btn btn-dark"><i class="fa-solid fa-cart-shopping" style="color: #ff5900;"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-      </header>
-    
+      <nav id="navegador" class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+              <!-- Logo siempre visible -->
+              <a class="navbar-brand">
+                  <img src="img/logotipo.png" id="logotipo" alt="Logo" class="d-inline-block align-text-top">
+              </a>
+              
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                      data-bs-target="#navbarNav" aria-controls="navbarNav" 
+                      aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              
+              <!-- Elementos colapsables -->
+              <div class="collapse navbar-collapse" id="navbarNav">
+                  <!-- Menú principal alineado a la izquierda -->
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                          <a class="nav-link" id="opcion_navegador" href="index.html">Inicio</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" id="opcion_navegador" href="productos.html">Productos</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link active" id="opcion_seleccionada" aria-current="page" href="nosotros.html">Sobre nosotros</a>
+                      </li>
+                  </ul>
+                  
+                  <!-- Botones de acción alineados a la derecha -->
+                  <div class="text-center">
+                      <a href="dashboard.html" id="boton_navegador" class="btn btn-dark me-2">Iniciar Sesión</a>
+                      <a href="lista_compra.html" id="carrito_compra" class="btn btn-dark">
+                          <i class="fa-solid fa-cart-shopping" style="color: #ff5900;"> Carrito</i>
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </nav>
+    </header>
+
     
 
     
