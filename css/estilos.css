@@ -1,4 +1,7 @@
-body {
+/* ==========================================
+   ESTILOS GENERALES DEL BODY Y FONDO
+   ========================================== */
+   body {
     position: relative;
     background-image: url(../img/fondo.jpg);
     background-size: cover;
@@ -24,14 +27,17 @@ body::before {
     z-index: -1;
 }
 
-header{
+/* ==========================================
+   ESTILOS DEL HEADER Y NAVEGACIÓN
+   ========================================== */
+header {
     background-color: transparent;
     padding: 10px;
     text-align: center;
     border-radius: 1px 1px 10px 10px;
 }
 
-#navegador{
+#navegador {
     font-size: 1.5em;
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
@@ -39,43 +45,108 @@ header{
     margin: 0 auto;
     border-radius: 1px 1px 10px 10px;
     color: gold;
-
 }
-#logotipo{
+
+#logotipo {
     width: 210px;
     height: 80px;
     border-radius: 10px;
     margin: 0 auto;
 }
 
-#opcion_navegador{
+#opcion_navegador {
     color: rgb(179, 153, 9);
     font-weight: bold;
     border-radius: 10px;
+    transition: all 0.3s ease;
 }
 
-#opcion_navegador:hover{
+#opcion_navegador:hover {
     color: gold;
-    background-color:rgba(0, 0, 0, 0.319);
+    background-color: rgba(0, 0, 0, 0.319);
 }
 
-#boton_navegador{
+#opcion_seleccionada {
+    color: gold;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+#boton_navegador {
     margin-top: 0.2em;
     color: rgba(255, 255, 255, 0.705);
     font-size: 0.8em;
     font-weight: bold;
     border-radius: 10px;
     border: 2px solid gold;
+    transition: all 0.3s ease;
 }
 
-#boton_navegador:hover{
+#boton_navegador:hover {
     color: gold;
-    background-color:black;
+    background-color: black;
     border-radius: 10px;
     border: 2px solid gold;
 }
 
-h1{
+#carrito_compra {
+    border-radius: 10px;
+    border: 2px solid gold;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: all 0.3s ease;
+}
+
+#carrito_compra:hover {
+    background-color: black;
+}
+
+/* Media queries para el navbar en diferentes pantallas */
+@media (max-width: 991.98px) {
+    #navegador {
+        font-size: 1.2em;
+    }
+    
+    #logotipo {
+        width: 180px;
+        height: 70px;
+    }
+    
+    .navbar-collapse {
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        padding: 10px;
+        margin-top: 10px;
+    }
+    
+    .d-flex {
+        margin-top: 1rem;
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    #boton_navegador {
+        flex-grow: 1;
+        margin-right: 10px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 575.98px) {
+    #navegador {
+        font-size: 1em;
+    }
+    
+    #logotipo {
+        width: 150px;
+        height: 60px;
+    }
+}
+
+/* ==========================================
+   ESTILOS DE ENCABEZADOS
+   ========================================== */
+h1 {
     -webkit-text-stroke: 0.6px black; /* Ancho y color del borde */
     text-shadow: gold 1px 8px 6px;
     border-radius: 10px;
@@ -87,17 +158,32 @@ h1{
     -webkit-text-fill-color: transparent;
 }
 
-#informacion_1{
+h2 {
+    -webkit-text-stroke: 0.4px black; /* Ancho y color del borde */
+    font-size: 3em;
+    text-align: center;
+    color: gold;
+    text-shadow: black 0px 8px 5px;
+    margin-bottom: 1em;
+}
+
+/* ==========================================
+   ESTILOS DE SECCIONES DE CONTENIDO
+   ========================================== */
+#informacion_1 {
     background-color: rgba(240, 255, 255, 0.219);
     border-radius: 10px;
     align-content: center;
     text-align: justify;
+    padding: 15px;
 }
-#informacion_1 p{
+
+#informacion_1 p {
     color: #000;
     font-size: 1.5em;
 }
-#imagen_2{
+
+#imagen_2 {
     width: 100%;
     height: 100%;
     border-radius: 10px;
@@ -105,16 +191,10 @@ h1{
     object-fit: cover; /* Ajusta la imagen para cubrir el espacio */
 }
 
- @keyframes spin { /*Animación para el giro del carusel */
-    from{
-        --angle: 0deg;
-    }
-    to{
-        --angle: 360deg;
-    }
-}
-
-#carusel{
+/* ==========================================
+   ESTILOS DEL CARRUSEL
+   ========================================== */
+#carusel {
     width: 100%;
     height: 100%;
     border-radius: 30px;
@@ -125,7 +205,7 @@ h1{
     position: relative;
 }
 
-#carusel_presentacion{
+#carusel_presentacion {
     width: 100%;
     height: 100%;
     border-radius: 30px;
@@ -135,19 +215,18 @@ h1{
     align-items: center;
 }
 
-@property --angle { /* Propiedad personalizada para el ángulo de rotación */
-    syntax: "<angle>"; /* Define el tipo de valor esperado */
-    initial-value: 0deg; /* Valor inicial */
-    inherits: false; /* No hereda de los elementos padre */
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
 }
 
-#carusel_presentacion::after,#carusel_presentacion::before{
-    
+#carusel_presentacion::after, #carusel_presentacion::before {
     content: '';
     position: absolute;
     height: 102%;
     width: 102%;
-    background-image: conic-gradient(from var(--angle),red, blue, green, yellow, red);
+    background-image: conic-gradient(from var(--angle), red, blue, green, yellow, red);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -157,103 +236,119 @@ h1{
     animation: 3s spin linear infinite;
 }
 
-#carusel_presentacion::before{
+#carusel_presentacion::before {
     filter: blur(1.5rem);
     opacity: 0.5;
 }
 
-@keyframes spin {
-    from{
-        --angle: 0deg;
-    }
-    to{
-        --angle: 360deg;
-    }
-}
-
-#imagenes_carusel{
+#imagenes_carusel {
     width: 100%;
     height: 100%;
     border-radius: 30px;
     margin: 0 auto;
 }
 
-h2{
-    -webkit-text-stroke: 0.4px black; /* Ancho y color del borde */
-    font-size: 3em;
-    text-align: center;
-    color: gold;
-    text-shadow: black 0px 8px 5px;
-    margin-bottom: 1em;
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
 }
 
-#tarjeta_1{
+/* ==========================================
+   ESTILOS DE TARJETAS DE PRODUCTOS
+   ========================================== */
+#tarjeta_1 {
     background-color: #000;
     color: gold;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-#tarjeta_1 a{
-    font-family:Arial, Helvetica, sans-serif;
+#tarjeta_1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+}
+
+#tarjeta_1 a {
+    font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
     font-size: 25px;
     color: gold;
     font-weight: bold;
     border-radius: 10px;
     padding: 0.5em 4em;
-    /* background-color: aliceblue; */
 }
 
-#imagenes_cards{
+#imagenes_cards {
     height: 300px; /* Establece una altura fija para todas las imágenes */
     object-fit: cover; /* Ajusta la imagen para cubrir el espacio */
+    transition: all 0.3s ease;
 }
 
-footer{
+#tarjeta_1:hover #imagenes_cards {
+    transform: scale(1.05);
+}
+
+/* ==========================================
+   ESTILOS DEL FOOTER
+   ========================================== */
+footer {
     background-color: rgba(77, 77, 77, 0.384);
     padding: 10px;
     text-align: center;
     border-radius: 1px 1px 10px 10px;
+    margin-top: 20px;
 }
-footer h3{
+
+footer h3 {
     color: gold;
     font-size: 2em;
     font-weight: bold;
     text-shadow: 1px 1px 1px black;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     padding: 10px;
     margin: 0 auto;
     border-radius: 1px 1px 10px 10px;
 }
-footer i{
+
+footer i {
     font-size: 1.5em;
     font-weight: bold;
     text-shadow: 1px 1px 1px black;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     padding: 10px;
     margin: 0 auto;
     border-radius: 1px 1px 10px 10px;
 }
-#mapa{
-    border-radius: 10px;
-    margin: 0 auto;
+
+footer ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding-left: 0;
 }
-#mapa iframe{
-    width: 90%;
-    height: 80%;
+
+footer ul li {
+    margin: 0 10px; /* Espacio entre los elementos de la lista */
+    color: gold;
+    text-shadow: 2px 2px 2px black;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    border-radius: 1px 1px 10px 10px;
+}
+
+#mapa {
     border-radius: 10px;
     margin: 0 auto;
 }
 
-footer ul{
-    list-style-type: none; /* Elimina los puntos de la lista */
-}
-footer ul li{
-    margin: 0 10px; /* Espacio entre los elementos de la lista */
-    color: gold;
-    text-shadow: 2px 2x 2px black;
-    font-family:Arial, Helvetica, sans-serif;
-    text-align: center;
-    border-radius: 1px 1px 10px 10px;
+#mapa iframe {
+    width: 90%;
+    height: 80%;
+    border-radius: 10px;
+    margin: 0 auto;
 }

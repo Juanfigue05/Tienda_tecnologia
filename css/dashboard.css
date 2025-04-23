@@ -1,0 +1,17 @@
+.boton_navegador_dashboard {
+    margin-top: 0.2em;
+    background-color: rgba(34, 34, 34, 0.651);
+    color: rgba(255, 255, 255, 0.705);
+    font-size: 0.8em;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px solid gold;
+    transition: all 0.3s ease;
+}
+
+.boton_navegador_dashboard:hover {
+    color: gold;
+    background-color: black;
+    border-radius: 10px;
+    border: 2px solid gold;
+}

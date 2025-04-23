@@ -12,15 +12,18 @@
 </head>
 <body>
     <header>
+        <div class="text-start">
+            <a href="index.html" id="boton_navegador" class="btn btn-dark">Cerrar Sesion</a>
+        </div>
         <div>
             <img src="img/logotipo.png" id="logotipo" alt="Logo" class="d-inline-block align-text-top">
             <h1>Bienvenido a la Administracion</h1>
         </div>
     </header>
-    <div class="container">
-        <button class="btn" id="boton_navegador_dashboard">Ingresar Inventario</button>
-        <button class="btn" id="boton_navegador_dashboard">Consultar Inventrio</button>
-        <button class="btn" id="boton_navegador_dashboard">Informe de ventas</button>
+    <div class="container text-center">
+        <button class="btn boton_navegador_dashboard" id="boton_ingresar_inventario">Ingresar Inventario</button>
+        <button class="btn boton_navegador_dashboard" id="boton_consultar_inventario">Consultar Inventrio</button>
+        <button class="btn boton_navegador_dashboard" id="boton_informe_ventas">Informe de ventas</button>
     </div>
 
     <div id="ingresar_inventario">
@@ -38,7 +41,9 @@
                     <label for="cantidad_producto" class="form-label">Cantidad</label>
                     <input type="number" class="form-control" id="cantidad_producto" required>
                 </div>
-                <button type="submit" class="btn btn-primary">Agregar Producto</button>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Agregar Producto</button>
+                </div>
             </div>
         </form>
     </div>
@@ -47,7 +52,7 @@
         <div class="container">
             <h2>Consultar Inventario</h2>
             <table class="table table-striped">
-                <thead>
+                <thead class="table-dark">
                     <tr>
                         <th>ID</th>
                         <th>Tipo</th>
@@ -62,6 +67,21 @@
                     <!-- Aquí se llenarán las filas de la tabla con JavaScript -->
                 </tbody>
             </table>
+            <h3>Modificar Precio</h3>
+            <form action="">
+                <div class="mb-3">
+                    <label for="producto" class="form-label">Nombre del producto</label>
+                    <select name="" id="producto" class="form-control">
+                        <option value="" disabled>Seleccione el producto</option>
+                        <div id="productos_json"></div>
+                    </select>
+                    <label for="modificar_precio" class="form-label">Precio</label>
+                    <input type="number" class="form-control" id="modificar_precio" required>
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-success " type="submit">Guardar Cambios</button>
+                </div>
+            </form>
         </div>
     </div>
 
@@ -70,7 +90,7 @@
             <div class="container">
                 <h2>Informe de Ventas</h2>
                 <table class="table table-striped">
-                    <thead>
+                    <thead class="table-dark">
                         <tr>
                             <th>ID</th>
                             <th>Producto</th>
@@ -81,7 +101,7 @@
                         <!-- Aquí se llenarán las filas de la tabla con JavaScript -->
                     </tbody>
                 </table>
-                <p>Total Ganancias:</p><p id="total_ganancia"></p>
+                <h3>total Ganancias</h3><p id="total_ganancia"></p>
             </div>
     </div>
 
