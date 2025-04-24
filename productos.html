@@ -30,10 +30,10 @@
                   <!-- Menú principal alineado a la izquierda -->
                   <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                       <li class="nav-item">
-                          <a class="nav-link active" id="opcion_seleccionada" aria-current="page" href="index.html">Inicio</a>
+                          <a class="nav-link" id="opcion_navegador" href="index.html">Inicio</a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link" id="opcion_navegador" href="productos.html">Productos</a>
+                          <a class="nav-link active" id="opcion_seleccionada" aria-current="page" href="productos.html">Productos</a>
                       </li>
                       <li class="nav-item">
                           <a class="nav-link" id="opcion_navegador" href="nosotros.html">Sobre nosotros</a>
@@ -52,9 +52,74 @@
       </nav>
     </header> 
 
-    <div class="container">
-        <div class="row" id="productos">
-
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Columna de filtros -->
+            <div class="col-lg-3 col-md-4 col-sm-12 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="mb-0">Filtros</h3>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="mb-3">Categoría</h4>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input filtro-categoria" type="checkbox" value="Camara web hd" id="check-camara">
+                            <label class="form-check-label" for="check-camara">Cámara Web</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input filtro-categoria" type="checkbox" value="Monitor" id="check-monitor">
+                            <label class="form-check-label" for="check-monitor">Monitores</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input filtro-categoria" type="checkbox" value="Teclado" id="check-teclado">
+                            <label class="form-check-label" for="check-teclado">Teclados</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input filtro-categoria" type="checkbox" value="Mouse" id="check-mouse">
+                            <label class="form-check-label" for="check-mouse">Mouses</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input filtro-categoria" type="checkbox" value="Luces" id="check-luces">
+                            <label class="form-check-label" for="check-luces">Luces</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input filtro-categoria" type="checkbox" value="Chasis" id="check-chasis">
+                            <label class="form-check-label" for="check-chasis">Chasis</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input filtro-categoria" type="checkbox" value="Placa madre" id="check-placa">
+                            <label class="form-check-label" for="check-placa">Placas madre</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input filtro-categoria" type="checkbox" value="Memoria RAM" id="check-ram">
+                            <label class="form-check-label" for="check-ram">Memorias RAM</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input filtro-categoria" type="checkbox" value="Disco duro" id="check-disco">
+                            <label class="form-check-label" for="check-disco">Discos duro</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input filtro-categoria" type="checkbox" value="Procesador" id="check-procesador">
+                            <label class="form-check-label" for="check-procesador">Procesador</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input filtro-categoria" type="checkbox" value="Tarjeta grafica" id="check-tarjeta">
+                            <label class="form-check-label" for="check-tarjeta">Tarjeta gráfica</label>
+                        </div>
+                        <div class="mt-3">
+                            <button id="aplicar_filtros" class="btn btn-primary w-100">Aplicar filtros</button>
+                            <button id="limpiar_filtros" class="btn btn-outline-secondary w-100 mt-2">Limpiar filtros</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Columna de productos -->
+            <div class="col-lg-9 col-md-8 col-sm-12">
+                <div class="row" id="productos">
+                    <!-- Aquí se mostraran los productos con productos.js -->
+                </div>
+            </div>
         </div>
     </div>
         

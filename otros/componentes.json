@@ -223,7 +223,7 @@
         "estilo": "Normal",
         "tiene_rgb": "No",
         "precio": 180000,
-        "img": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4OXNg"
+        "img": "https://resources.claroshop.com/medios-plazavip/mkt/622aea9fe3779_3330210webpjpg.jpg"
    ,"cantidad": 10
       },
       {
@@ -453,7 +453,7 @@
         "modelo": "H510",
         "medidas": "435mm x 210mm x 428mm",
         "precio": 350000,
-        "img": "https://nzxt.com/assets/cms/34299/1615587975-h510-white-black-mainw-system.png?auto=format&fit=crop&h=1000&w=1000"
+        "img": "https://nzxt.com/assets/cms/34299/1615563443-h510-elite-white-black-kraken-x-system-purple-lighting-2.png?auto=format&fit=crop&h=1000&w=1000"
    ,"cantidad": 10
       },
       {
@@ -698,7 +698,7 @@
         "tipo_ram": "DDR4",
         "precio": 320000,
         "img": "https://media.kingston.com/kingston/product/FURY_Beast_RGB_Black_DDR4_2_angle-zm-lg.jpg"
-   ,"cantidad": 10
+   ,"cantidad": 0
       },
       {
         "tipo": "Memoria RAM",
@@ -835,7 +835,7 @@
         "velocidad_lectura": "7000 MB/s",
         "precio": 650000,
         "img": "https://tecnolosys.com/168436-superlarge_default_2x/ssd-kingston-kc3000-pcie-40-nvme-m2-2048gb.jpg"
-   ,"cantidad": 10
+   ,"cantidad": 0
       },
       {
         "tipo": "Disco duro",
@@ -1156,7 +1156,8 @@
         "año_creacion": "2022",
         "memoria": "24GB GDDR6X",
         "precio": 5800000,
-        "img": "https://m.media-amazon.com/images/I/81QuOSSvYAS.jpg"
+        "img": "https://m.media-amazon.com/images/I/81QuOSSvYAS.jpg",
+        "cantidad": 0
       }
       ]
   }
