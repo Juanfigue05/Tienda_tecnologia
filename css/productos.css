@@ -1,0 +1,41 @@
+.carta_mostrar{
+    background: rgba(255,255,255,0.85);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 1em;
+}
+.imagen_card{
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.carta_mostrar img{
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.carta_mostrar h3{
+    font-size: 0.8em;
+    font-weight: bold;
+}
+.carta_mostrar h4{
+    font-weight: bold;
+}
+
+.carta_mostrar p{
+    font-size: 0.8rem;
+    color: #555;
+}
+.contenedor_img{
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 10px;
+}
