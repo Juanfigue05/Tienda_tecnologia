@@ -95,29 +95,29 @@ function imprimir_productos(filtros = []) {
         
         // Establecer descripción según el tipo de producto
         if (producto.tipo == "Monitor") {
-            descripcion.textContent = `${producto.conexiones.join(", ")}, ${producto.pulgadas} pulgadas, ${producto.resolucion}`;
+            descripcion.innerHTML = `Conexiones: ${producto.conexiones.join(", ")}<br>Pulgadas: ${producto.pulgadas}" <br>Resolución máx: ${producto.resolucion}`;
         } else if (producto.tipo == "Teclado") {
-            descripcion.textContent = `${producto.conexiones.join(", ")}, Estilo: ${producto.estilo}, ${producto.tiene_rgb}`;
+            descripcion.innerHTML = `Conexiones:${producto.conexiones.join(", ")}, <br>Estilo: ${producto.estilo}<br>Rgb:${producto.tiene_rgb}`;
         } else if (producto.tipo == "Mouse") {
-            descripcion.textContent = `${producto.estilo}, ${producto.tiene_rgb}`;
+            descripcion.innerHTML = `Estilo:${producto.estilo}<br>Rgb:${producto.tiene_rgb}`;
         } else if (producto.tipo == "Luces") {
-            descripcion.textContent = `Color: ${producto.color}, Tamaño: ${producto.tamaño}, ${producto.controlador}`;
+            descripcion.innerHTML = `Color: ${producto.color}<br>Tamaño: ${producto.tamaño}<br>Controlador:${producto.controlador}`;
         } else if (producto.tipo == "Chasis") {
-            descripcion.textContent = `Medidas: ${producto.medidas}`;
+            descripcion.innerHTML = `Medidas: ${producto.medidas}`;
         } else if (producto.tipo == "Placa madre") {
-            descripcion.textContent = `${producto.conexiones.join(", ")}, ${producto.cantidad_slot_ram} slots RAM, ${producto.procesador_maximo}`;
+            descripcion.innerHTML = `Conexiones:${producto.conexiones.join(", ")}<br>Slost ram:${producto.cantidad_slot_ram} slots<br>Procesador max:${producto.procesador_maximo}`;
         } else if (producto.tipo == "Memoria RAM") {
-            descripcion.textContent = `Capacidad: ${producto.tamaño}, Frecuencia máxima: ${producto.frecuencia_maxima}, ${producto.tipo_ram}`;
+            descripcion.innerHTML = `Capacidad: ${producto.tamaño}<br>Frecuencia máxima: ${producto.frecuencia_maxima}<br>Tipo:${producto.tipo_ram}`;
         } else if (producto.tipo == "Disco duro") {
-            descripcion.textContent = `Tipo: ${producto.tipo_disco}, ${producto.tipo_almacenamiento}, ${producto.capacidad}, ${producto.velocidad_lectura}`;
+            descripcion.innerHTML = `Tipo: ${producto.tipo_disco}<br>Almacenamiento:${producto.tipo_almacenamiento}<br>Capacidad:${producto.capacidad}<br>Lectura:${producto.velocidad_lectura}`;
         } else if (producto.tipo == "Procesador") {
-            descripcion.textContent = `Frecuencia máxima: ${producto.frecuencia_maxima}, ${producto.generacion}, ${producto.nucleos} núcleos, ${producto.hilos} hilos`;
+            descripcion.innerHTML = `Frecuencia máxima: ${producto.frecuencia_maxima}<br>Generacion:${producto.generacion}<br># Nucleos:${producto.nucleos} núcleos<br># Hilos:${producto.hilos} hilos`;
         } else if (producto.tipo == "Tarjeta grafica") {
-            descripcion.textContent = `Frecuencia máxima: ${producto.frecuencia_maxima}, ${producto.año_creacion}, ${producto.memoria}`;
+            descripcion.innerHTML = `Frecuencia máxima: ${producto.frecuencia_maxima}<br>${producto.año_creacion}<br>${producto.memoria}`;
         } else if (producto.tipo == "Camara web hd") {
-            descripcion.textContent = `${producto.conexion}, ${producto.fecha_creacion}`;
+            descripcion.innerHTML = `Conexiones: ${producto.conexion}<br>Año creación: ${producto.fecha_creacion}`;
         } else {
-            descripcion.textContent = "No hay especificaciones";
+            descripcion.innerHTML = "No hay especificaciones";
         }
         
         // Footer de la tarjeta

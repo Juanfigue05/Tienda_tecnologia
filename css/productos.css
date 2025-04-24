@@ -1,7 +1,7 @@
 .carta_mostrar{
-    background: rgba(255,255,255,0.85);
+    background: rgba(248, 248, 248, 0.126);
     border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
     margin: 1em;
 }
 .imagen_card{
@@ -40,7 +40,6 @@
     padding: 10px;
 }
 
-/* estilo para la parte de filtro */
 /* Estilos para la sección de productos */
 .producto-card {
     transition: transform 0.3s, box-shadow 0.3s;
@@ -50,11 +49,11 @@
 
 .producto-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important; 
 }
 
 .img-container {
-    background-color: #f8f9fa;
+    background-color: transparent;
     overflow: hidden;
 }
 
@@ -68,8 +67,8 @@
 
 /* Estilos para la barra de filtros */
 .form-check-input:checked {
-    background-color: #007bff;
-    border-color: #007bff;
+    background-color: rgb(205, 176, 9);
+    border-color: gold;
 }
 
 /* Mejora visual para los botones de filtrado */
@@ -82,7 +81,7 @@
 }
 
 #btn-limpiar-filtros:hover {
-    background-color: #f8f9fa;
+    background-color: #f8f9fa23;
 }
 
 /* Mejora para el título de cada producto */
@@ -102,7 +101,7 @@
 /* Estilos para la descripción */
 .card-text {
     color: #6c757d;
-    height: 4.5rem;
+    height: 6rem;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -131,4 +130,8 @@
 .container {
     padding-top: 2rem;
     padding-bottom: 2rem;
+}
+
+.card-footer{
+    margin-top: 2em;
 }
