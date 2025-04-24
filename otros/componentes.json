@@ -8,6 +8,7 @@
           "fecha_creacion": "2012",
           "precio": 250000,
           "img": "https://resource.logitech.com/content/dam/logitech/en/products/webcams/c920/gallery/c920-gallery-1.png"
+   ,"cantidad": 10
       },
       {
         "tipo": "Camara web hd",
@@ -17,6 +18,7 @@
         "fecha_creacion": "2021",
         "precio": 650000,
         "img": "https://www.gizcomputer.com/wp-content/uploads/2021/03/Razer-Kiyo-Pro-Foto-destacada.jpg" 
+   ,"cantidad": 10
       },
       {
         "tipo": "Camara web hd",
@@ -26,6 +28,7 @@
         "fecha_creacion": "2011",
         "precio": 180000,
         "img": "https://www.apcomputadores.com/wp-content/uploads/2022/08/Camara-Web-MICROSOFT-LifeCam-HD-3000.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Camara web hd",
@@ -35,6 +38,7 @@
         "fecha_creacion": "2020",
         "precio": 320000,
         "img": "https://reset.net.co/wp-content/uploads/2021/08/Webcam_C3_Asus_1080p_30_fps_Mic_Beamforming_2.webp"
+   ,"cantidad": 10
       },
       {
         "tipo": "Camara web hd",
@@ -44,6 +48,7 @@
         "fecha_creacion": "2018",
         "precio": 160000,
         "img": "https://panamericana.vtexassets.com/arquivos/ids/404325-800-auto?v=637660470673600000&width=800&height=auto&aspect=true"
+   ,"cantidad": 10
       },
       {
         "tipo": "Monitor",
@@ -54,6 +59,7 @@
         "resolucion": "2560x1440",
         "precio": 1200000,
         "img": "https://images.samsung.com/is/image/samsung/p6pim/co/ls27cg552enxza/gallery/co-odyssey-g5-32g55c-502973-ls27cg552enxza-541570531?$684_547_PNG$"
+   ,"cantidad": 10
       },
       {
         "tipo": "Monitor",
@@ -64,6 +70,7 @@
         "resolucion": "2560x1440",
         "precio": 950000,
         "img": "https://www.muycomputer.com/wp-content/uploads/2020/11/LG-UltraGear-27GN800-1000x600.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Monitor",
@@ -74,6 +81,7 @@
         "resolucion": "1920x1080",
         "precio": 780000,
         "img": "https://www.asus.com/media/global/gallery/fDEM5l3CieKtQEeN_setting_xxx_0_90_end_800.png"
+   ,"cantidad": 10
       },
       {
         "tipo": "Monitor",
@@ -84,6 +92,7 @@
         "resolucion": "1920x1080",
         "precio": 850000,
         "img": "https://asset.msi.com/resize/image/global/product/product_4_20190820091455_5d5bba0fa82f3.png62405b38c58fe0f07fcef2367d8a9ba1/600.png"
+   ,"cantidad": 10
       },
       {
         "tipo": "Monitor",
@@ -94,6 +103,7 @@
         "resolucion": "1920x1080",
         "precio": 720000,
         "img": "https://powerdeal.com.co/cdn/shop/files/KG270.01.png?v=1713031170"
+   ,"cantidad": 10
       },
       {
         "tipo": "Monitor",
@@ -104,6 +114,7 @@
         "resolucion": "3840x2160",
         "precio": 1800000,
         "img": "https://image-us.samsung.com/SamsungUS/home/ca-assets-folder/32290/27d/S70D_001_Front_Black_w_Badge.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Monitor",
@@ -114,6 +125,7 @@
         "resolucion": "2560x1080",
         "precio": 800000,
         "img": "https://www.lg.com/content/dam/channel/wcms/co/images/monitores/29wp500-b_awp_escb_co_c/gallery/zoom-01.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Monitor",
@@ -124,6 +136,7 @@
         "resolucion": "3840x2160",
         "precio": 2800000,
         "img": "https://hexus.net/media/uploaded/2019/1/c658131c-9fa0-493e-aeec-d84ef8f0de36.png"
+   ,"cantidad": 10
       },
       {
         "tipo": "Monitor",
@@ -134,6 +147,7 @@
         "resolucion": "1920x1080",
         "precio": 650000,
         "img": "https://reset.net.co/wp-content/uploads/2020/06/Monitor_AOC_24_CURVO_C24G1_144HZ_3.webp"
+   ,"cantidad": 10
       },
       {
         "tipo": "Monitor",
@@ -144,6 +158,7 @@
         "resolucion": "2560x1440",
         "precio": 1450000,
         "img": "https://www.apcomputadores.com/wp-content/uploads/2021/06/Sin-titulo-1.jpg.webp"
+   ,"cantidad": 10
       },
       {
         "tipo": "Teclado",
@@ -151,9 +166,10 @@
         "modelo": "G Pro X",
         "conexiones": ["USB"],
         "estilo": "Mecanico",
-        "tiene_rgb": "Si",
+        "tiene_rgb": "Tiene RGB",
         "precio": 450000,
         "img": "https://www.pcsystemstore.com.pe/wp-content/uploads/2022/01/TECLADO-LOGITECH-PRO-KEYBOARD-RGB-USB-BLACK-3.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Teclado",
@@ -161,9 +177,10 @@
         "modelo": "BlackWidow V3",
         "conexiones": ["USB"],
         "estilo": "Mecanico",
-        "tiene_rgb": "Si",
+        "tiene_rgb": "Tiene RGB",
         "precio": 580000,
         "img": "https://content.app-sources.com/s/06812195814293589/uploads/TECLADOS/20218.1-2712760.png"
+   ,"cantidad": 10
       },
       {
         "tipo": "Teclado",
@@ -171,9 +188,10 @@
         "modelo": "Alloy Origins Core",
         "conexiones": ["USB"],
         "estilo": "Mecanico",
-        "tiene_rgb": "Si",
+        "tiene_rgb": "Tiene RGB",
         "precio": 380000,
         "img": "https://clonesyperifericos.com/wp-content/uploads/2021/10/2-18.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Teclado",
@@ -181,9 +199,10 @@
         "modelo": "K70 RGB MK.2",
         "conexiones": ["USB"],
         "estilo": "Mecanico",
-        "tiene_rgb": "Si",
+        "tiene_rgb": "Tiene RGB",
         "precio": 650000,
         "img": "https://m.media-amazon.com/images/I/71hdk4PnJFL._AC_SL1500_.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Teclado",
@@ -191,9 +210,10 @@
         "modelo": "Apex Pro",
         "conexiones": ["USB"],
         "estilo": "Mecanico",
-        "tiene_rgb": "Si",
+        "tiene_rgb": "Tiene RGB",
         "precio": 700000,
         "img": "https://m.media-amazon.com/images/I/71HmUNj01VL.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Teclado",
@@ -204,6 +224,7 @@
         "tiene_rgb": "No",
         "precio": 180000,
         "img": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4OXNg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Teclado",
@@ -214,6 +235,7 @@
         "tiene_rgb": "No",
         "precio": 120000,
         "img": "https://megacomputer.com.co/wp-content/uploads/2024/08/920-011783.png"
+   ,"cantidad": 10
       },
       {
         "tipo": "Teclado",
@@ -221,9 +243,10 @@
         "modelo": "One 2 Mini",
         "conexiones": ["USB"],
         "estilo": "Mecanico",
-        "tiene_rgb": "Si",
+        "tiene_rgb": "Tiene RGB",
         "precio": 430000,
         "img": "https://m.media-amazon.com/images/I/71cLFUb+yrL.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Teclado",
@@ -231,9 +254,10 @@
         "modelo": "ROG Strix Scope",
         "conexiones": ["USB"],
         "estilo": "Mecanico",
-        "tiene_rgb": "Si",
+        "tiene_rgb": "Tiene RGB",
         "precio": 550000,
         "img": "https://cdnx.jumpseller.com/tienda-gamer-medellin/image/48273334/61831880d49ec.jpg?1715018521"
+   ,"cantidad": 10
       },
       {
         "tipo": "Teclado",
@@ -241,9 +265,10 @@
         "modelo": "K2",
         "conexiones": ["USB", "Bluetooth"],
         "estilo": "Mecanico",
-        "tiene_rgb": "Si",
+        "tiene_rgb": "Tiene RGB",
         "precio": 350000,
         "img": "https://m.media-amazon.com/images/I/61efvyxdAZL._AC_SL1200_.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Mouse",
@@ -253,42 +278,47 @@
         "tiene_rgb": "No",
         "precio": 550000,
         "img": "https://m.media-amazon.com/images/I/51uy8gOG-iL.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Mouse",
         "marca": "Razer",
         "modelo": "DeathAdder V2",
         "estilo": "Gamer",
-        "tiene_rgb": "Si",
+        "tiene_rgb": "Tiene RGB",
         "precio": 230000,
         "img": "https://assets2.razerzone.com/images/og-image/deathadder-v2-og-image.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Mouse",
         "marca": "SteelSeries",
         "modelo": "Rival 600",
         "estilo": "Gamer",
-        "tiene_rgb": "Si",
+        "tiene_rgb": "Tiene RGB",
         "precio": 320000,
         "img": "https://media.steelseriescdn.com/thumbs/filer_public/4f/ec/4fec8ad0-451b-4b73-87c5-e365e33a02e7/05_rival600_kv_top_hero.png__1920x1080_crop-fit_optimize_subsampling-2.png"
+   ,"cantidad": 10
       },
       {
         "tipo": "Mouse",
         "marca": "Corsair",
         "modelo": "M65 RGB Elite",
         "estilo": "Gamer",
-        "tiene_rgb": "Si",
+        "tiene_rgb": "Tiene RGB",
         "precio": 290000,
         "img": "https://pcmastersbogota.com.co/wp-content/uploads/2021/08/CH-9309111-NA-Gallery-M65-RGB-ELITE-WHT-04.webp"
+   ,"cantidad": 10
       },
       {
         "tipo": "Mouse",
         "marca": "HyperX",
         "modelo": "Pulsefire FPS Pro",
         "estilo": "Gamer",
-        "tiene_rgb": "Si",
+        "tiene_rgb": "Tiene RGB",
         "precio": 210000,
         "img": "https://exitocol.vtexassets.com/arquivos/ids/24304028/mouse-gamer-hyperx-pulsefire-fps-pro-rgb-16000dpi-6-botones.jpg?v=638604803398900000"
+   ,"cantidad": 10
       },
       {
         "tipo": "Mouse",
@@ -298,6 +328,7 @@
         "tiene_rgb": "No",
         "precio": 120000,
         "img": "https://http2.mlstatic.com/D_NQ_NP_841356-MCO40648894374_022020-O.webp"
+   ,"cantidad": 10
       },
       {
         "tipo": "Mouse",
@@ -307,6 +338,7 @@
         "tiene_rgb": "No",
         "precio": 380000,
         "img": "https://pcgamermedellin.com/wp-content/uploads/2024/10/mouse-inalambrico-logitech-mx-master-3s-negro-3.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Mouse",
@@ -316,24 +348,27 @@
         "tiene_rgb": "No",
         "precio": 260000,
         "img": "https://image.benq.com/is/image/benqco/ec2-measurement-1?$ResponsivePreset$&fmt=png-alpha"
+   ,"cantidad": 10
       },
       {
         "tipo": "Mouse",
         "marca": "Glorious",
         "modelo": "Model O",
         "estilo": "Gamer",
-        "tiene_rgb": "Si",
+        "tiene_rgb": "Tiene RGB",
         "precio": 250000,
         "img": "https://m.media-amazon.com/images/I/71gPyCyreBL.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Mouse",
         "marca": "ASUS",
         "modelo": "ROG Gladius III",
         "estilo": "Gamer",
-        "tiene_rgb": "Si",
+        "tiene_rgb": "Tiene RGB",
         "precio": 350000,
         "img": "https://www.laneros.com/attachments/1656884383337-png.517549/"
+   ,"cantidad": 10
       },
       {
         "tipo": "Luces",
@@ -344,6 +379,7 @@
         "controlador": "USB",
         "precio": 300000,
         "img": "https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/116121013_08/w=800,h=800,fit=pad"
+   ,"cantidad": 10
       },
       {
         "tipo": "Luces",
@@ -354,6 +390,7 @@
         "controlador": "Control",
         "precio": 350000,
         "img": "https://cdn.grupoelcorteingles.es/SGFM/dctm/MEDIA03/202411/19/00128645809014____6__1200x1200.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Luces",
@@ -364,6 +401,7 @@
         "controlador": "Control",
         "precio": 450000,
         "img": "https://eu-cdn.nanoleaf.me/assets/img/products/essentials/owl/matter/lightstrips/2m/ROTW/1-essentials-matter-lightstrip-2m-smk@1x.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Luces",
@@ -374,6 +412,7 @@
         "controlador": "USB",
         "precio": 250000,
         "img": "https://hardaily.com/wp-content/uploads/2022/05/razer-chroma-light-strip-set-44-hardaily.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Luces",
@@ -384,6 +423,7 @@
         "controlador": "USB",
         "precio": 280000,
         "img": "https://m.media-amazon.com/images/I/714P79gyLeL._AC_UF894,1000_QL80_.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Luces",
@@ -394,6 +434,7 @@
         "controlador": "Control",
         "precio": 180000,
         "img": "https://m.media-amazon.com/images/I/71axP+Y99dL.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Luces",
@@ -404,6 +445,7 @@
         "controlador": "USB",
         "precio": 400000,
         "img": "https://elchapuzasinformatico.com/wp-content/uploads/2022/05/Lian-Li-Strimer-Plus-V2.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Chasis",
@@ -412,6 +454,7 @@
         "medidas": "435mm x 210mm x 428mm",
         "precio": 350000,
         "img": "https://nzxt.com/assets/cms/34299/1615587975-h510-white-black-mainw-system.png?auto=format&fit=crop&h=1000&w=1000"
+   ,"cantidad": 10
       },
       {
         "tipo": "Chasis",
@@ -420,6 +463,7 @@
         "medidas": "453mm x 230mm x 466mm",
         "precio": 380000,
         "img": "https://pcmastersbogota.com.co/wp-content/uploads/2023/03/base-4000d-airflow-config-Gallery-4000D-AF-BLACK-18-7.webp"
+   ,"cantidad": 10
       },
       {
         "tipo": "Chasis",
@@ -428,6 +472,7 @@
         "medidas": "465mm x 210mm x 470mm",
         "precio": 330000,
         "img": "https://m.media-amazon.com/images/I/71HlajPgsCL.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Chasis",
@@ -436,6 +481,7 @@
         "medidas": "493mm x 217mm x 468mm",
         "precio": 320000,
         "img": "https://compugamercol.com/wp-content/uploads/2022/09/MCB-D500D-WGNN-S01.png"
+   ,"cantidad": 10
       },
       {
         "tipo": "Chasis",
@@ -444,6 +490,7 @@
         "medidas": "445mm x 285mm x 446mm",
         "precio": 650000,
         "img": "https://lian-li.com/wp-content/uploads/2023/12/O11D-EVO-RBG_09.webp"
+   ,"cantidad": 10
       },
       {
         "tipo": "Chasis",
@@ -452,6 +499,7 @@
         "medidas": "413mm x 217mm x 453mm",
         "precio": 370000,
         "img": "https://m.media-amazon.com/images/I/91zUa+-t1RL.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Chasis",
@@ -460,6 +508,7 @@
         "medidas": "450mm x 232mm x 463mm",
         "precio": 420000,
         "img": "https://lvpc.com.mx/wp-content/uploads/2023/06/Chasis-be-quiet-Pure-base-500DX-White-8.webp"
+   ,"cantidad": 10
       },
       {
         "tipo": "Chasis",
@@ -468,6 +517,7 @@
         "medidas": "512mm x 333mm x 470mm",
         "precio": 580000,
         "img": "https://es.thermaltake.com/pub/media/wysiwyg/key3/db/products/case/core_p3_tg/pic7_1.png"
+   ,"cantidad": 10
       },
       {
         "tipo": "Chasis",
@@ -476,6 +526,7 @@
         "medidas": "480mm x 230mm x 505mm",
         "precio": 480000,
         "img": "https://m.media-amazon.com/images/I/61CTe9lywcL._AC_UF894,1000_QL80_.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Chasis",
@@ -484,6 +535,7 @@
         "medidas": "426mm x 210mm x 465mm",
         "precio": 290000,
         "img": "https://m.media-amazon.com/images/I/71AVtBserOL.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Chasis",
@@ -492,6 +544,7 @@
         "medidas": "452mm x 228mm x 477mm",
         "precio": 280000,
         "img": "https://cdn.deepcool.com/public/ProductFile/DEEPCOOL/Cases/CK500/Overview/03_01.jpg?fm=webp&q=60"
+   ,"cantidad": 10
       },
       {
         "tipo": "Placa madre",
@@ -502,6 +555,7 @@
         "procesador_maximo": "Intel Core i9-14900K",
         "precio": 1800000,
         "img": "https://m.media-amazon.com/images/I/81cQQqzPcSL.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Placa madre",
@@ -512,6 +566,7 @@
         "procesador_maximo": "AMD Ryzen 9 7950X",
         "precio": 1100000,
         "img": "https://asset.msi.com/resize/image/global/product/product_166478620721bbeb5fac5e7800fc1614cf6e023720.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png"
+   ,"cantidad": 10
       },
       {
         "tipo": "Placa madre",
@@ -522,6 +577,7 @@
         "procesador_maximo": "AMD Ryzen 9 5950X",
         "precio": 950000,
         "img": "https://pcmastersbogota.com.co/wp-content/uploads/2021/08/D_NQ_NP_2X_900054-MCO40915792264_022020-F.webp"
+   ,"cantidad": 10
       },
       {
         "tipo": "Placa madre",
@@ -532,6 +588,7 @@
         "procesador_maximo": "AMD Ryzen 9 7900X",
         "precio": 780000,
         "img": "https://m.media-amazon.com/images/I/71p1pb-K3OL.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Placa madre",
@@ -542,6 +599,7 @@
         "procesador_maximo": "AMD Ryzen 9 5950X",
         "precio": 620000,
         "img": "https://avatars.mds.yandex.net/get-mpic/1883514/2a00000191a1c3799a3526909cdde0c4f57c/orig"
+   ,"cantidad": 10
       },
       {
         "tipo": "Placa madre",
@@ -552,6 +610,7 @@
         "procesador_maximo": "Intel Core i9-12900K",
         "precio": 1250000,
         "img": "https://m.media-amazon.com/images/I/91P4WhdjpnL._AC_SL1500_.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Placa madre",
@@ -562,6 +621,7 @@
         "procesador_maximo": "Intel Core i9-12900K",
         "precio": 680000,
         "img": "https://static.gigabyte.com/StaticFile/Image/Global/8f2e3970f3e8ff80b018015d1110069c/Product/30815/Png"
+   ,"cantidad": 10
       },
       {
         "tipo": "Placa madre",
@@ -572,6 +632,7 @@
         "procesador_maximo": "AMD Ryzen 9 7950X",
         "precio": 2100000,
         "img": "https://dlcdnwebimgs.asus.com/files/media/0CBC145C-59B8-4B51-BF1A-DA0749FA1522/v1/img/kv/pd.png"
+   ,"cantidad": 10
       },
       {
         "tipo": "Placa madre",
@@ -582,6 +643,7 @@
         "procesador_maximo": "Intel Core i5-12600K",
         "precio": 320000,
         "img": "https://pcmatplus.com/wp-content/uploads/2023/05/90-MXBHT0-A0UAYZ-1.png"
+   ,"cantidad": 10
       },
       {
         "tipo": "Placa madre",
@@ -592,6 +654,7 @@
         "procesador_maximo": "AMD Ryzen 9 7900X",
         "precio": 750000,
         "img": "https://asset.msi.com/resize/image/global/product/product_1664782100d10ef26fe3fc5c4c436cc139db200c1c.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png"
+   ,"cantidad": 10
       },
       {
         "tipo": "Placa madre",
@@ -602,6 +665,7 @@
         "procesador_maximo": "Intel Core i9-13900K",
         "precio": 1450000,
         "img": "https://digitalstore.com.co/wp-content/uploads/2024/12/03BO25.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Memoria RAM",
@@ -612,6 +676,7 @@
         "tipo_ram": "DDR4",
         "precio": 380000,
         "img": "https://m.media-amazon.com/images/I/71e6YWJio-L.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Memoria RAM",
@@ -622,6 +687,7 @@
         "tipo_ram": "DDR4",
         "precio": 650000,
         "img": "https://m.media-amazon.com/images/I/61l4EStxhnL._AC_SL1274_.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Memoria RAM",
@@ -632,6 +698,7 @@
         "tipo_ram": "DDR4",
         "precio": 320000,
         "img": "https://media.kingston.com/kingston/product/FURY_Beast_RGB_Black_DDR4_2_angle-zm-lg.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Memoria RAM",
@@ -642,6 +709,7 @@
         "tipo_ram": "DDR4",
         "precio": 350000,
         "img": "https://www.tradeinn.com/f/13783/137837003/micron-memoria-ram-ballistix-crucial-16gb-2x8gb-ddr4-3600mhz.webp"
+   ,"cantidad": 10
       },
       {
         "tipo": "Memoria RAM",
@@ -652,6 +720,7 @@
         "tipo_ram": "DDR5",
         "precio": 720000,
         "img": "https://m.media-amazon.com/images/I/81ov4cFmdaL.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Memoria RAM",
@@ -662,6 +731,7 @@
         "tipo_ram": "DDR5",
         "precio": 950000,
         "img": "https://tiendaakiba.com/wp-content/uploads/memoria-ram-corsair-dominator-platinum-rgb-32gb-kit-2x16-ddr5-pc5-41600-5200mhz-foto-1.webp"
+   ,"cantidad": 10
       },
       {
         "tipo": "Memoria RAM",
@@ -672,6 +742,7 @@
         "tipo_ram": "DDR5",
         "precio": 880000,
         "img": "https://m.media-amazon.com/images/I/71CrmOfjDDL.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Memoria RAM",
@@ -682,6 +753,7 @@
         "tipo_ram": "DDR5",
         "precio": 1050000,
         "img": "https://m.media-amazon.com/images/I/71ws2evSdkL.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Memoria RAM",
@@ -692,6 +764,7 @@
         "tipo_ram": "DDR5",
         "precio": 920000,
         "img": "https://m.media-amazon.com/images/I/510fA0L432L.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Memoria RAM",
@@ -702,6 +775,7 @@
         "tipo_ram": "DDR4",
         "precio": 390000,
         "img": "https://images.teamgroupinc.com/products/memory/u-dimm/ddr5/vulcan-alpha/red/dual_01.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Disco duro",
@@ -713,6 +787,7 @@
         "velocidad_lectura": "3500 MB/s",
         "precio": 480000,
         "img": "https://m.media-amazon.com/images/I/71OYNmVRFhL.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Disco duro",
@@ -724,6 +799,7 @@
         "velocidad_lectura": "7300 MB/s",
         "precio": 950000,
         "img": "https://www.westerndigital.com/content/dam/store/en-us/assets/products/internal-storage/wd-black-sn850x-nvme-ssd/gallery/wd-black-sn850x-nvme-ssd-front.png"
+   ,"cantidad": 10
       },
       {
         "tipo": "Disco duro",
@@ -735,6 +811,7 @@
         "velocidad_lectura": "560 MB/s",
         "precio": 350000,
         "img": "https://down-mx.img.susercontent.com/file/sg-11134201-23020-nx5fq0gyrlnvc4"
+   ,"cantidad": 10
       },
       {
         "tipo": "Disco duro",
@@ -746,6 +823,7 @@
         "velocidad_lectura": "190 MB/s",
         "precio": 220000,
         "img": "https://pcgamermedellin.com/wp-content/uploads/2022/05/1493-1.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Disco duro",
@@ -757,6 +835,7 @@
         "velocidad_lectura": "7000 MB/s",
         "precio": 650000,
         "img": "https://tecnolosys.com/168436-superlarge_default_2x/ssd-kingston-kc3000-pcie-40-nvme-m2-2048gb.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Disco duro",
@@ -768,6 +847,7 @@
         "velocidad_lectura": "140 MB/s",
         "precio": 180000,
         "img": "https://www.bginversiones.com/wp-content/uploads/2023/03/Disco-Duro-PC-Western-Digital-1TB-Azul-Sata.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Disco duro",
@@ -779,6 +859,7 @@
         "velocidad_lectura": "7000 MB/s",
         "precio": 1100000,
         "img": "https://m.media-amazon.com/images/I/71KeDAkw+0L.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Disco duro",
@@ -790,6 +871,7 @@
         "velocidad_lectura": "7100 MB/s",
         "precio": 920000,
         "img": "https://m.media-amazon.com/images/I/81KQIn5w-BL.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Disco duro",
@@ -801,6 +883,7 @@
         "velocidad_lectura": "7300 MB/s",
         "precio": 780000,
         "img": "https://cdn.idealo.com/folder/Product/201453/6/201453679/s11_produktbild_max/seagate-firecuda-530.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Disco duro",
@@ -812,6 +895,7 @@
         "velocidad_lectura": "7400 MB/s",
         "precio": 620000,
         "img": "https://basevirtual.com.co/wp-content/uploads/2022/04/BASE-VIRTUAL-DISCO-XPG-M21-1TB-S70-BLADE.png"
+   ,"cantidad": 10
       },
       {
         "tipo": "Procesador",
@@ -824,6 +908,7 @@
         "hilos": 32,
         "precio": 2300000,
         "img": "https://m.media-amazon.com/images/I/61My4F2-XUL._AC_SL1500_.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Procesador",
@@ -836,6 +921,7 @@
         "hilos": 32,
         "precio": 2400000,
         "img": "https://www.notebookcheck.org/fileadmin/Notebooks/News/_nc3/csm_luke_chesser_tgrBcf7S_dY_unsplash_49af4fd126.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Procesador",
@@ -848,6 +934,7 @@
         "hilos": 24,
         "precio": 1680000,
         "img": "https://themark.com.co/wp-content/uploads/2024/09/637849-MLA52678952836_122022-F.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Procesador",
@@ -860,6 +947,7 @@
         "hilos": 16,
         "precio": 1450000,
         "img": "https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/2505503-ryzen-7-7700x.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Procesador",
@@ -872,6 +960,7 @@
         "hilos": 20,
         "precio": 1250000,
         "img": "https://themark.com.co/wp-content/uploads/2024/09/D_NQ_NP_2X_689478-CBT75868664823_042024-F.webp"
+   ,"cantidad": 10
       },
       {
         "tipo": "Procesador",
@@ -884,6 +973,7 @@
         "hilos": 12,
         "precio": 980000,
         "img": "https://www.bginversiones.com/wp-content/uploads/2023/02/AMD-Ryzen™-5-7600X.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Procesador",
@@ -896,6 +986,7 @@
         "hilos": 24,
         "precio": 1800000,
         "img": "https://wuuju.co/cdn/shop/files/i912900.png?v=1703282861"
+   ,"cantidad": 10
       },
       {
         "tipo": "Procesador",
@@ -908,6 +999,7 @@
         "hilos": 32,
         "precio": 1950000,
         "img": "https://m.media-amazon.com/images/I/61ISSSA+x+L.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Procesador",
@@ -920,6 +1012,7 @@
         "hilos": 20,
         "precio": 1400000,
         "img": "https://i.pcmag.com/imagery/reviews/07rfvBq3YYV4bfaooOD3INP-4.fit_lim.size_1050x.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Procesador",
@@ -932,6 +1025,7 @@
         "hilos": 16,
         "precio": 1380000,
         "img": "https://keagamerstore.com/wp-content/uploads/2023/10/0899681562.png"
+   ,"cantidad": 10
       },
       {
         "tipo": "Tarjeta grafica",
@@ -942,6 +1036,7 @@
         "memoria": "24GB GDDR6X",
         "precio": 9500000,
         "img": "https://pcgamermedellin.com/wp-content/uploads/2024/11/gpu-tarjeta-grafica-nvidia-geforce-rtx-4090-asus-rog-strix-btf-oc-24gb-gddr6x-1.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Tarjeta grafica",
@@ -952,6 +1047,7 @@
         "memoria": "24GB GDDR6",
         "precio": 6800000,
         "img": "https://pg.asrock.com/Graphics-Card/photo/Radeon%20RX%207900%20XTX%20Phantom%20Gaming%2024GB%20OC(L1).png"
+   ,"cantidad": 10
       },
       {
         "tipo": "Tarjeta grafica",
@@ -962,6 +1058,7 @@
         "memoria": "16GB GDDR6X",
         "precio": 5800000,
         "img": "https://tiendaakiba.com/wp-content/uploads/tarjeta-de-video-asus-tuf-gaming-geforce-rtx-4080-super-oc-edition-gddr6x-16gb-nvidia-foto-1.webp"
+   ,"cantidad": 10
       },
       {
         "tipo": "Tarjeta grafica",
@@ -972,6 +1069,7 @@
         "memoria": "20GB GDDR6",
         "precio": 5500000,
         "img": "https://assets.encargomio.com/img/products/GIGABYTE_Radeon_RX_7/17263114081.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Tarjeta grafica",
@@ -982,6 +1080,7 @@
         "memoria": "12GB GDDR6X",
         "precio": 3800000,
         "img": "https://static.gigabyte.com/StaticFile/Image/Global/921d5ec36b34b98308c4b223717cd467/Product/39511/Png"
+   ,"cantidad": 10
       },
       {
         "tipo": "Tarjeta grafica",
@@ -992,6 +1091,7 @@
         "memoria": "16GB GDDR6X",
         "precio": 6200000,
         "img": "https://m.media-amazon.com/images/I/71stHfUBHXL.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Tarjeta grafica",
@@ -1002,6 +1102,7 @@
         "memoria": "20GB GDDR6",
         "precio": 7000000,
         "img": "https://m.media-amazon.com/images/I/81my7QEJ8dL.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Tarjeta grafica",
@@ -1012,6 +1113,7 @@
         "memoria": "12GB GDDR6X",
         "precio": 3500000,
         "img": "https://asset.msi.com/resize/image/global/product/product_16812916502ca0a14b6dfb5319c99da1d4ffb3a8ad.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png"
+   ,"cantidad": 10
       },
       {
         "tipo": "Tarjeta grafica",
@@ -1022,6 +1124,7 @@
         "memoria": "16GB GDDR6",
         "precio": 3300000,
         "img": "https://m.media-amazon.com/images/I/91g3-mnMQ-L.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Tarjeta grafica",
@@ -1032,6 +1135,7 @@
         "memoria": "12GB GDDR6X",
         "precio": 4200000,
         "img": "https://images.stockx.com/images/NVIDIA-GIGABYTE-AORUS-GeForce-RTX-4070-Ti-ELITE-12G-Graphics-Card-GV-N407TAORUS-E-12GD.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1673367015"
+   ,"cantidad": 10
       },
       {
         "tipo": "Tarjeta grafica",
@@ -1042,6 +1146,7 @@
         "memoria": "24GB GDDR6",
         "precio": 6900000,
         "img": "https://m.media-amazon.com/images/I/61i5SeUzAeL.jpg"
+   ,"cantidad": 10
       },
       {
         "tipo": "Tarjeta grafica",
