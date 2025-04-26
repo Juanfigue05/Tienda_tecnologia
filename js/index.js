@@ -1,14 +1,10 @@
-//si es primera vez que se carga la pagina
-if (localStorage.getItem("primeraVez") === null) {
-    localStorage.clear();
-    localStorage.setItem("primeraVez", "true");
-    console.log("Es la primera vez que se carga la página.");
-}
-//si no es la primera vez que se carga la pagina
-else {
-    console.log("No es la primera vez que se carga la página.");
-    
-}
+const btn_producto= document.getElementById("boton_productos");
+
+btn_producto.addEventListener("click",()=>{
+    let valor="";
+    console.log("Valor del div clickeado:", valor);
+    localStorage.setItem("valorDiv_carta", valor);
+})
 
 const tarjetas = document.querySelectorAll(".card");
 
@@ -29,3 +25,4 @@ if (tarjetas.length > 0) {
 } else {
     console.error("No se encontraron elementos con la clase 'card'.");
 }
+

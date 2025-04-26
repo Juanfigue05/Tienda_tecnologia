@@ -1,5 +1,6 @@
 const filtro = localStorage.getItem("valorDiv_carta");
 
+console.log("Div seleccionado: "+filtro)
 
 
 // Traer la información del JSON en la carpeta otros
@@ -22,11 +23,6 @@ fetch(url)
         // Crear el contenedor de productos
         const contenedorProductos = document.getElementById("productos-container");
 
-        // Filtrar los productos según el filtro (usando la propiedad "tipo")
-        const productosFiltrados = productos.filter(producto => producto.tipo === filtro);
-        console.log("Productos filtrados:", productosFiltrados);
-        imprimir_productos();
-        // Verificar si hay productos filtrados
     })
     .catch(error => console.error('Error al cargar el JSON:', error));
 
@@ -190,7 +186,15 @@ function agregarAlCarrito(producto) {
 // Configurar filtros
 document.addEventListener('DOMContentLoaded', function() {
     // Cargar productos al cargar la página
+    if(filtro==""){
     imprimir_productos();
+    }
+    else{
+        //hacer checkbox al que tiene el id que diga el filtro
+        
+        imprimir_productos(filtro);
+
+    }
     
     // Configurar el botón de aplicar filtros
     const boton_aplicar_filtros = document.getElementById('aplicar_filtros');

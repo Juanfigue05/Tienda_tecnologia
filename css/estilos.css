@@ -66,6 +66,18 @@ header {
     background-color: rgba(0, 0, 0, 0.319);
 }
 
+#boton_productos {
+    color: rgb(179, 153, 9);
+    font-weight: bold;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+#boton_productos:hover {
+    color: gold;
+    background-color: rgba(0, 0, 0, 0.319);
+}
+
 #opcion_seleccionada {
     color: gold;
     font-weight: bold;
