@@ -410,7 +410,7 @@ footer ul li {
 
 /* Estilos para el carrito */
 #offcanvasBottom {
-    height: 80vh; 
+    height: 60vh; 
 }
 
 .producto-card {
@@ -446,9 +446,9 @@ footer ul li {
     right: -5px;
     background-color: #ff5900;
     color: white;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
+    border-radius: 40%;
+    width: 10px;
+    height: 10px;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -243,7 +243,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Crear el resumen del carrito (total y botones)
         const resumenContainer = document.createElement('div');
-        resumenContainer.className = "col-12 mt-3";
+        resumenContainer.className = "col-12";
         
         const resumenCard = document.createElement('div');
         resumenCard.className = "card shadow-sm";
