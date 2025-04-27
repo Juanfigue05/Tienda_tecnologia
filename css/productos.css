@@ -101,7 +101,7 @@
 /* Estilos para la descripción */
 .card-text {
     color: #6c757d;
-    height: 6rem;
+    height: 6.5rem;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
