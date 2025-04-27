@@ -249,7 +249,7 @@ h2 {
 }
 
 #carusel_presentacion::before {
-    filter: blur(1.5rem);
+    filter: blur(2rem);
     opacity: 0.5;
 }
 
@@ -363,4 +363,110 @@ footer ul li {
     height: 80%;
     border-radius: 10px;
     margin: 0 auto;
+}
+
+/* Para la version del offcanva  en index productos y nosotros html*/
+#offcanvasBottom{
+    background-color: black;
+    color: gold;
+    text-shadow: 0px 2px 8px gold;
+
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+#offcanvasBottom::after, #offcanvasBottom::before {
+    content: '';
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), rgba(255, 217, 0, 0.349),rgb(54, 6, 141),rgb(90, 2, 2),rgba(187, 126, 12, 0.836));
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    padding: 5px;
+    animation: 20s spin linear infinite;
+    opacity: 0.000000001;
+}
+
+#offcanvasBottom::before {
+    filter: blur(0.5rem);
+    opacity: 0.2;
+}
+
+@keyframes spin {
+    from {
+        --angle: 360deg;
+    }
+    to {
+        --angle: 0deg;
+    }
+}
+
+/* Estilos para el carrito */
+#offcanvasBottom {
+    height: 80vh; 
+}
+
+.producto-card {
+    transition: all 0.3s ease;
+}
+
+.producto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.btn-agregar-carrito {
+    background-color: #ff5900;
+    border-color: #ff5900;
+}
+
+.btn-agregar-carrito:hover {
+    background-color: #e65100;
+    border-color: #e65100;
+}
+
+#informacion_compras .table img {
+    object-fit: contain;
+}
+
+#carrito_compra {
+    position: relative;
+}
+
+#carrito_compra .contador {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #ff5900;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+/* Estilo para productos agotados */
+.btn-agregar-carrito:disabled {
+    cursor: not-allowed;
+}
+
+/* Animación para agregar al carrito */
+@keyframes agregado {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.producto-agregado {
+    animation: agregado 0.5s ease;
 }

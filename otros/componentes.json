@@ -1,7 +1,8 @@
 {
     "componentes": [
       {
-          "tipo": "Camara web hd",
+         "id":1,
+      "tipo": "Camara web hd",
           "marca": "Logitech",
           "modelo": "C920",
           "conexion": "USB",
@@ -11,7 +12,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Camara web hd",
+       "id":2,
+      "tipo": "Camara web hd",
         "marca": "Razer",
         "modelo": "Kiyo Pro",
         "conexion": "USB",
@@ -21,7 +23,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Camara web hd",
+       "id":3,
+      "tipo": "Camara web hd",
         "marca": "Microsoft",
         "modelo": "LifeCam HD-3000",
         "conexion": "USB",
@@ -31,7 +34,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Camara web hd",
+       "id":4,
+      "tipo": "Camara web hd",
         "marca": "Asus",
         "modelo": "Webcam C3",
         "conexion": "USB",
@@ -41,7 +45,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Camara web hd",
+       "id":5,
+      "tipo": "Camara web hd",
         "marca": "Trust",
         "modelo": "Trino HD",
         "conexion": "USB",
@@ -51,7 +56,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Monitor",
+       "id":6,
+      "tipo": "Monitor",
         "marca": "Samsung",
         "modelo": "Odyssey G5",
         "conexiones": ["HDMI", "DisplayPort"],
@@ -62,7 +68,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Monitor",
+       "id":7,
+      "tipo": "Monitor",
         "marca": "LG",
         "modelo": "UltraGear 27GN800",
         "conexiones": ["HDMI", "DisplayPort"],
@@ -73,7 +80,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Monitor",
+       "id":8,
+      "tipo": "Monitor",
         "marca": "ASUS",
         "modelo": "VG248QG",
         "conexiones": ["HDMI", "DisplayPort", "DVI"],
@@ -84,7 +92,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Monitor",
+       "id":9,
+      "tipo": "Monitor",
         "marca": "MSI",
         "modelo": "Optix G27C4",
         "conexiones": ["HDMI", "DisplayPort"],
@@ -95,7 +104,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Monitor",
+       "id":10,
+      "tipo": "Monitor",
         "marca": "Acer",
         "modelo": "Nitro VG270",
         "conexiones": ["HDMI", "VGA"],
@@ -106,7 +116,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Monitor",
+       "id":11,
+      "tipo": "Monitor",
         "marca": "Samsung",
         "modelo": "ViewFinity S7",
         "conexiones": ["HDMI", "DisplayPort"],
@@ -117,7 +128,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Monitor",
+       "id":12,
+      "tipo": "Monitor",
         "marca": "LG",
         "modelo": "29WP500-B",
         "conexiones": ["HDMI"],
@@ -128,7 +140,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Monitor",
+       "id":13,
+      "tipo": "Monitor",
         "marca": "Acer",
         "modelo": "Predator X27",
         "conexiones": ["HDMI", "DisplayPort"],
@@ -139,7 +152,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Monitor",
+       "id":14,
+      "tipo": "Monitor",
         "marca": "AOC",
         "modelo": "C24G1",
         "conexiones": ["HDMI", "DisplayPort", "VGA"],
@@ -150,7 +164,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Monitor",
+       "id":15,
+      "tipo": "Monitor",
         "marca": "BenQ",
         "modelo": "EX2780Q",
         "conexiones": ["HDMI", "DisplayPort", "USB-C"],
@@ -161,7 +176,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Teclado",
+       "id":16,
+      "tipo": "Teclado",
         "marca": "Logitech",
         "modelo": "G Pro X",
         "conexiones": ["USB"],
@@ -172,7 +188,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Teclado",
+       "id":17,
+      "tipo": "Teclado",
         "marca": "Razer",
         "modelo": "BlackWidow V3",
         "conexiones": ["USB"],
@@ -183,7 +200,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Teclado",
+       "id":18,
+      "tipo": "Teclado",
         "marca": "HyperX",
         "modelo": "Alloy Origins Core",
         "conexiones": ["USB"],
@@ -194,7 +212,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Teclado",
+       "id":19,
+      "tipo": "Teclado",
         "marca": "Corsair",
         "modelo": "K70 RGB MK.2",
         "conexiones": ["USB"],
@@ -205,7 +224,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Teclado",
+       "id":20,
+      "tipo": "Teclado",
         "marca": "SteelSeries",
         "modelo": "Apex Pro",
         "conexiones": ["USB"],
@@ -216,7 +236,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Teclado",
+       "id":21,
+      "tipo": "Teclado",
         "marca": "Microsoft",
         "modelo": "Bluetooth Keyboard",
         "conexiones": ["Bluetooth"],
@@ -227,7 +248,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Teclado",
+       "id":22,
+      "tipo": "Teclado",
         "marca": "Logitech",
         "modelo": "K380",
         "conexiones": ["Bluetooth"],
@@ -238,7 +260,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Teclado",
+       "id":23,
+      "tipo": "Teclado",
         "marca": "Ducky",
         "modelo": "One 2 Mini",
         "conexiones": ["USB"],
@@ -249,7 +272,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Teclado",
+       "id":24,
+      "tipo": "Teclado",
         "marca": "ASUS",
         "modelo": "ROG Strix Scope",
         "conexiones": ["USB"],
@@ -260,7 +284,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Teclado",
+       "id":25,
+      "tipo": "Teclado",
         "marca": "Keychron",
         "modelo": "K2",
         "conexiones": ["USB", "Bluetooth"],
@@ -271,7 +296,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Mouse",
+       "id":26,
+      "tipo": "Mouse",
         "marca": "Logitech",
         "modelo": "G Pro X Superlight",
         "estilo": "Gamer",
@@ -281,7 +307,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Mouse",
+       "id":27,
+      "tipo": "Mouse",
         "marca": "Razer",
         "modelo": "DeathAdder V2",
         "estilo": "Gamer",
@@ -291,7 +318,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Mouse",
+       "id":28,
+      "tipo": "Mouse",
         "marca": "SteelSeries",
         "modelo": "Rival 600",
         "estilo": "Gamer",
@@ -301,7 +329,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Mouse",
+       "id":29,
+      "tipo": "Mouse",
         "marca": "Corsair",
         "modelo": "M65 RGB Elite",
         "estilo": "Gamer",
@@ -311,7 +340,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Mouse",
+       "id":30,
+      "tipo": "Mouse",
         "marca": "HyperX",
         "modelo": "Pulsefire FPS Pro",
         "estilo": "Gamer",
@@ -321,7 +351,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Mouse",
+       "id":31,
+      "tipo": "Mouse",
         "marca": "Microsoft",
         "modelo": "Bluetooth Mouse",
         "estilo": "Oficina",
@@ -331,7 +362,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Mouse",
+       "id":32,
+      "tipo": "Mouse",
         "marca": "Logitech",
         "modelo": "MX Master 3",
         "estilo": "Oficina",
@@ -341,7 +373,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Mouse",
+       "id":33,
+      "tipo": "Mouse",
         "marca": "Zowie",
         "modelo": "EC2",
         "estilo": "Gamer",
@@ -351,7 +384,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Mouse",
+       "id":34,
+      "tipo": "Mouse",
         "marca": "Glorious",
         "modelo": "Model O",
         "estilo": "Gamer",
@@ -361,7 +395,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Mouse",
+       "id":35,
+      "tipo": "Mouse",
         "marca": "ASUS",
         "modelo": "ROG Gladius III",
         "estilo": "Gamer",
@@ -371,7 +406,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Luces",
+       "id":36,
+      "tipo": "Luces",
         "marca": "Corsair",
         "modelo": "iCUE LS100",
         "color": "Multicolor",
@@ -382,7 +418,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Luces",
+       "id":37,
+      "tipo": "Luces",
         "marca": "Philips",
         "modelo": "Hue Light Strip",
         "color": "Multicolor",
@@ -393,7 +430,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Luces",
+       "id":38,
+      "tipo": "Luces",
         "marca": "Nanoleaf",
         "modelo": "Lines",
         "color": "Multicolor",
@@ -404,7 +442,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Luces",
+       "id":39,
+      "tipo": "Luces",
         "marca": "Razer",
         "modelo": "Chroma LED Strip",
         "color": "Multicolor",
@@ -415,7 +454,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Luces",
+       "id":40,
+      "tipo": "Luces",
         "marca": "NZXT",
         "modelo": "HUE 2 RGB",
         "color": "Multicolor",
@@ -426,7 +466,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Luces",
+       "id":41,
+      "tipo": "Luces",
         "marca": "Govee",
         "modelo": "RGBIC Pro",
         "color": "Multicolor",
@@ -437,7 +478,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Luces",
+       "id":42,
+      "tipo": "Luces",
         "marca": "Lian Li",
         "modelo": "Strimer Plus V2",
         "color": "Multicolor",
@@ -448,7 +490,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Chasis",
+       "id":43,
+      "tipo": "Chasis",
         "marca": "NZXT",
         "modelo": "H510",
         "medidas": "435mm x 210mm x 428mm",
@@ -457,7 +500,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Chasis",
+       "id":44,
+      "tipo": "Chasis",
         "marca": "Corsair",
         "modelo": "4000D Airflow",
         "medidas": "453mm x 230mm x 466mm",
@@ -466,7 +510,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Chasis",
+       "id":45,
+      "tipo": "Chasis",
         "marca": "Phanteks",
         "modelo": "P400A",
         "medidas": "465mm x 210mm x 470mm",
@@ -475,7 +520,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Chasis",
+       "id":46,
+      "tipo": "Chasis",
         "marca": "Cooler Master",
         "modelo": "MasterBox TD500 Mesh",
         "medidas": "493mm x 217mm x 468mm",
@@ -484,7 +530,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Chasis",
+       "id":47,
+      "tipo": "Chasis",
         "marca": "Lian Li",
         "modelo": "O11 Dynamic",
         "medidas": "445mm x 285mm x 446mm",
@@ -493,7 +540,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Chasis",
+       "id":48,
+      "tipo": "Chasis",
         "marca": "Fractal Design",
         "modelo": "Meshify C",
         "medidas": "413mm x 217mm x 453mm",
@@ -502,7 +550,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Chasis",
+       "id":49,
+      "tipo": "Chasis",
         "marca": "be quiet!",
         "modelo": "Pure Base 500DX",
         "medidas": "450mm x 232mm x 463mm",
@@ -511,7 +560,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Chasis",
+       "id":50,
+      "tipo": "Chasis",
         "marca": "Thermaltake",
         "modelo": "Core P3",
         "medidas": "512mm x 333mm x 470mm",
@@ -520,7 +570,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Chasis",
+       "id":51,
+      "tipo": "Chasis",
         "marca": "NZXT",
         "modelo": "H7 Flow",
         "medidas": "480mm x 230mm x 505mm",
@@ -529,7 +580,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Chasis",
+       "id":52,
+      "tipo": "Chasis",
         "marca": "Silverstone",
         "modelo": "FARA R1",
         "medidas": "426mm x 210mm x 465mm",
@@ -538,7 +590,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Chasis",
+       "id":53,
+      "tipo": "Chasis",
         "marca": "DeepCool",
         "modelo": "CL500",
         "medidas": "452mm x 228mm x 477mm",
@@ -547,7 +600,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Placa madre",
+       "id":54,
+      "tipo": "Placa madre",
         "marca": "ASUS",
         "modelo": "ROG Strix Z790-E Gaming WiFi",
         "conexiones": ["HDMI x 1", "DisplayPort x 1", "USB 3.2 Gen 2 x 4", "USB 3.2 Gen 1 x 2", "USB 2.0 x 4"],
@@ -558,7 +612,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Placa madre",
+       "id":55,
+      "tipo": "Placa madre",
         "marca": "MSI",
         "modelo": "MAG B650 TOMAHAWK WiFi",
         "conexiones": ["HDMI x 1", "DisplayPort x 1", "USB 3.2 Gen 2 x 2", "USB 3.2 Gen 1 x 6", "USB 2.0 x 4"],
@@ -569,7 +624,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Placa madre",
+       "id":56,
+      "tipo": "Placa madre",
         "marca": "Gigabyte",
         "modelo": "X570 AORUS Elite",
         "conexiones": ["HDMI x 1", "USB 3.2 Gen 2 x 2", "USB 3.2 Gen 1 x 4", "USB 2.0 x 4"],
@@ -580,7 +636,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Placa madre",
+       "id":57,
+      "tipo": "Placa madre",
         "marca": "ASRock",
         "modelo": "B650M Pro RS WiFi",
         "conexiones": ["HDMI x 1", "DisplayPort x 1", "USB 3.2 Gen 2 x 2", "USB 3.2 Gen 1 x 4", "USB 2.0 x 2"],
@@ -591,7 +648,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Placa madre",
+       "id":58,
+      "tipo": "Placa madre",
         "marca": "ASUS",
         "modelo": "TUF Gaming B550-Plus",
         "conexiones": ["HDMI x 1", "DisplayPort x 1", "USB 3.2 Gen 2 x 2", "USB 3.2 Gen 1 x 4", "USB 2.0 x 2"],
@@ -602,7 +660,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Placa madre",
+       "id":59,
+      "tipo": "Placa madre",
         "marca": "MSI",
         "modelo": "MPG Z690 Edge WiFi",
         "conexiones": ["HDMI x 1", "DisplayPort x 1", "USB 3.2 Gen 2x2 x 1", "USB 3.2 Gen 2 x 6", "USB 2.0 x 6"],
@@ -613,7 +672,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Placa madre",
+       "id":60,
+      "tipo": "Placa madre",
         "marca": "Gigabyte",
         "modelo": "B660M GAMING X DDR4",
         "conexiones": ["HDMI x 1", "DisplayPort x 1", "USB 3.2 Gen 1 x 4", "USB 2.0 x 4"],
@@ -624,7 +684,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Placa madre",
+       "id":61,
+      "tipo": "Placa madre",
         "marca": "ASUS",
         "modelo": "ROG Crosshair X670E Hero",
         "conexiones": ["HDMI x 1", "DisplayPort x 1", "USB 3.2 Gen 2x2 x 2", "USB 3.2 Gen 2 x 10", "USB 2.0 x 4"],
@@ -635,7 +696,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Placa madre",
+       "id":62,
+      "tipo": "Placa madre",
         "marca": "ASRock",
         "modelo": "H610M-HVS",
         "conexiones": ["HDMI x 1", "VGA x 1", "USB 3.2 Gen 1 x 2", "USB 2.0 x 4"],
@@ -646,7 +708,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Placa madre",
+       "id":63,
+      "tipo": "Placa madre",
         "marca": "MSI",
         "modelo": "PRO B650M-A WIFI",
         "conexiones": ["HDMI x 1", "DisplayPort x 1", "USB 3.2 Gen 2x2 x 1", "USB 3.2 Gen 2 x 2", "USB 2.0 x 6"],
@@ -657,7 +720,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Placa madre",
+       "id":64,
+      "tipo": "Placa madre",
         "marca": "Gigabyte",
         "modelo": "Z790 AORUS Elite AX",
         "conexiones": ["HDMI x 1", "DisplayPort x 1", "USB 3.2 Gen 2x2 x 1", "USB 3.2 Gen 2 x 2", "USB 3.2 Gen 1 x 8", "USB 2.0 x 4"],
@@ -668,7 +732,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Memoria RAM",
+       "id":65,
+      "tipo": "Memoria RAM",
         "marca": "Corsair",
         "modelo": "Vengeance RGB Pro",
         "tamaño": "16GB (2x8GB)",
@@ -679,7 +744,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Memoria RAM",
+       "id":66,
+      "tipo": "Memoria RAM",
         "marca": "G.Skill",
         "modelo": "Trident Z RGB",
         "tamaño": "32GB (2x16GB)",
@@ -690,7 +756,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Memoria RAM",
+       "id":67,
+      "tipo": "Memoria RAM",
         "marca": "Kingston",
         "modelo": "FURY Beast",
         "tamaño": "16GB (2x8GB)",
@@ -701,7 +768,8 @@
    ,"cantidad": 0
       },
       {
-        "tipo": "Memoria RAM",
+       "id":68,
+      "tipo": "Memoria RAM",
         "marca": "Crucial",
         "modelo": "Ballistix",
         "tamaño": "16GB (2x8GB)",
@@ -712,7 +780,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Memoria RAM",
+       "id":69,
+      "tipo": "Memoria RAM",
         "marca": "TeamGroup",
         "modelo": "T-Force Delta RGB",
         "tamaño": "32GB (2x16GB)",
@@ -723,7 +792,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Memoria RAM",
+       "id":70,
+      "tipo": "Memoria RAM",
         "marca": "Corsair",
         "modelo": "Dominator Platinum RGB",
         "tamaño": "32GB (2x16GB)",
@@ -734,7 +804,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Memoria RAM",
+       "id":71,
+      "tipo": "Memoria RAM",
         "marca": "G.Skill",
         "modelo": "Ripjaws S5",
         "tamaño": "32GB (2x16GB)",
@@ -745,7 +816,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Memoria RAM",
+       "id":72,
+      "tipo": "Memoria RAM",
         "marca": "Kingston",
         "modelo": "FURY Renegade",
         "tamaño": "32GB (2x16GB)",
@@ -756,7 +828,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Memoria RAM",
+       "id":73,
+      "tipo": "Memoria RAM",
         "marca": "ADATA",
         "modelo": "XPG Lancer RGB",
         "tamaño": "32GB (2x16GB)",
@@ -767,7 +840,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Memoria RAM",
+       "id":74,
+      "tipo": "Memoria RAM",
         "marca": "TeamGroup",
         "modelo": "T-Force Vulcan Alpha",
         "tamaño": "16GB (2x8GB)",
@@ -778,7 +852,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Disco duro",
+       "id":75,
+      "tipo": "Disco duro",
         "marca": "Samsung",
         "modelo": "970 EVO Plus",
         "tipo_disco": "M.2",
@@ -790,7 +865,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Disco duro",
+       "id":76,
+      "tipo": "Disco duro",
         "marca": "Western Digital",
         "modelo": "Black SN850X",
         "tipo_disco": "M.2",
@@ -802,7 +878,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Disco duro",
+       "id":77,
+      "tipo": "Disco duro",
         "marca": "Crucial",
         "modelo": "MX500",
         "tipo_disco": "2.5 SATA",
@@ -814,7 +891,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Disco duro",
+       "id":78,
+      "tipo": "Disco duro",
         "marca": "Seagate",
         "modelo": "BarraCuda",
         "tipo_disco": "3.5 SATA",
@@ -826,7 +904,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Disco duro",
+       "id":79,
+      "tipo": "Disco duro",
         "marca": "Kingston",
         "modelo": "KC3000",
         "tipo_disco": "M.2",
@@ -838,7 +917,8 @@
    ,"cantidad": 0
       },
       {
-        "tipo": "Disco duro",
+       "id":80,
+      "tipo": "Disco duro",
         "marca": "Western Digital",
         "modelo": "Blue",
         "tipo_disco": "2.5 SATA",
@@ -850,7 +930,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Disco duro",
+       "id":81,
+      "tipo": "Disco duro",
         "marca": "Samsung",
         "modelo": "980 PRO",
         "tipo_disco": "M.2",
@@ -862,7 +943,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Disco duro",
+       "id":82,
+      "tipo": "Disco duro",
         "marca": "Sabrent",
         "modelo": "Rocket 4 Plus",
         "tipo_disco": "M.2",
@@ -874,7 +956,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Disco duro",
+       "id":83,
+      "tipo": "Disco duro",
         "marca": "Seagate",
         "modelo": "FireCuda 530",
         "tipo_disco": "M.2",
@@ -886,7 +969,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Disco duro",
+       "id":84,
+      "tipo": "Disco duro",
         "marca": "ADATA",
         "modelo": "XPG GAMMIX S70 Blade",
         "tipo_disco": "M.2",
@@ -898,7 +982,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Procesador",
+       "id":85,
+      "tipo": "Procesador",
         "marca": "Intel",
         "modelo": "Core i9-13900K",
         "frecuencia_maxima": "5.8GHz",
@@ -911,7 +996,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Procesador",
+       "id":86,
+      "tipo": "Procesador",
         "marca": "AMD",
         "modelo": "Ryzen 9 7950X",
         "frecuencia_maxima": "5.7GHz",
@@ -924,7 +1010,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Procesador",
+       "id":87,
+      "tipo": "Procesador",
         "marca": "Intel",
         "modelo": "Core i7-13700K",
         "frecuencia_maxima": "5.4GHz",
@@ -937,7 +1024,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Procesador",
+       "id":88,
+      "tipo": "Procesador",
         "marca": "AMD",
         "modelo": "Ryzen 7 7700X",
         "frecuencia_maxima": "5.4GHz",
@@ -950,7 +1038,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Procesador",
+       "id":89,
+      "tipo": "Procesador",
         "marca": "Intel",
         "modelo": "Core i5-13600K",
         "frecuencia_maxima": "5.1GHz",
@@ -963,7 +1052,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Procesador",
+       "id":90,
+      "tipo": "Procesador",
         "marca": "AMD",
         "modelo": "Ryzen 5 7600X",
         "frecuencia_maxima": "5.3GHz",
@@ -976,7 +1066,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Procesador",
+       "id":91,
+      "tipo": "Procesador",
         "marca": "Intel",
         "modelo": "Core i9-12900K",
         "frecuencia_maxima": "5.2GHz",
@@ -989,7 +1080,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Procesador",
+       "id":92,
+      "tipo": "Procesador",
         "marca": "AMD",
         "modelo": "Ryzen 9 5950X",
         "frecuencia_maxima": "4.9GHz",
@@ -1002,7 +1094,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Procesador",
+       "id":93,
+      "tipo": "Procesador",
         "marca": "Intel",
         "modelo": "Core i7-12700K",
         "frecuencia_maxima": "5.0GHz",
@@ -1015,7 +1108,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Procesador",
+       "id":94,
+      "tipo": "Procesador",
         "marca": "AMD",
         "modelo": "Ryzen 7 5800X3D",
         "frecuencia_maxima": "4.5GHz",
@@ -1028,7 +1122,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Tarjeta grafica",
+       "id":95,
+      "tipo": "Tarjeta grafica",
         "marca": "NVIDIA",
         "modelo": "GeForce RTX 4090",
         "frecuencia_maxima": "2.52GHz",
@@ -1039,7 +1134,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Tarjeta grafica",
+       "id":1,
+      "tipo": "Tarjeta grafica",
         "marca": "AMD",
         "modelo": "Radeon RX 7900 XTX",
         "frecuencia_maxima": "2.3GHz",
@@ -1050,7 +1146,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Tarjeta grafica",
+       "id":96,
+      "tipo": "Tarjeta grafica",
         "marca": "NVIDIA",
         "modelo": "GeForce RTX 4080",
         "frecuencia_maxima": "2.51GHz",
@@ -1061,7 +1158,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Tarjeta grafica",
+       "id":97,
+      "tipo": "Tarjeta grafica",
         "marca": "AMD",
         "modelo": "Radeon RX 7900 XT",
         "frecuencia_maxima": "2.0GHz",
@@ -1072,7 +1170,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Tarjeta grafica",
+       "id":98,
+      "tipo": "Tarjeta grafica",
         "marca": "NVIDIA",
         "modelo": "GeForce RTX 4070 Ti",
         "frecuencia_maxima": "2.61GHz",
@@ -1083,7 +1182,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Tarjeta grafica",
+       "id":99,
+      "tipo": "Tarjeta grafica",
         "marca": "ASUS",
         "modelo": "ROG Strix GeForce RTX 4080",
         "frecuencia_maxima": "2.61GHz",
@@ -1094,7 +1194,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Tarjeta grafica",
+       "id":100,
+      "tipo": "Tarjeta grafica",
         "marca": "PowerColor",
         "modelo": "Red Devil Radeon RX 7900 XTX",
         "frecuencia_maxima": "2.5GHz",
@@ -1105,7 +1206,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Tarjeta grafica",
+       "id":101,
+      "tipo": "Tarjeta grafica",
         "marca": "MSI",
         "modelo": "Gaming X Trio GeForce RTX 4070",
         "frecuencia_maxima": "2.55GHz",
@@ -1116,7 +1218,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Tarjeta grafica",
+       "id":102,
+      "tipo": "Tarjeta grafica",
         "marca": "Sapphire",
         "modelo": "NITRO+ Radeon RX 7800 XT",
         "frecuencia_maxima": "2.43GHz",
@@ -1127,7 +1230,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Tarjeta grafica",
+       "id":103,
+      "tipo": "Tarjeta grafica",
         "marca": "Gigabyte",
         "modelo": "AORUS GeForce RTX 4070 Ti MASTER",
         "frecuencia_maxima": "2.7GHz",
@@ -1138,7 +1242,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Tarjeta grafica",
+       "id":104,
+      "tipo": "Tarjeta grafica",
         "marca": "XFX",
         "modelo": "Speedster MERC319 Radeon RX 7900 XTX",
         "frecuencia_maxima": "2.4GHz",
@@ -1149,7 +1254,8 @@
    ,"cantidad": 10
       },
       {
-        "tipo": "Tarjeta grafica",
+       "id":105,
+      "tipo": "Tarjeta grafica",
         "marca": "EVGA",
         "modelo": "GeForce RTX 3090 Ti FTW3 ULTRA",
         "frecuencia_maxima": "1.86GHz",

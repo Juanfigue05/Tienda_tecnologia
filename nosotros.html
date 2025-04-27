@@ -42,15 +42,24 @@
                   <!-- Botones de acción alineados a la derecha -->
                   <div class="text-center">
                       <a href="dashboard.html" id="boton_navegador" class="btn btn-dark me-2">Iniciar Sesión</a>
-                      <a href="lista_compra.html" id="carrito_compra" class="btn btn-dark">
-                          <i class="fa-solid fa-cart-shopping" style="color: #ff5900;"> Carrito</i>
-                      </a>
-                  </div>
-              </div>
-          </div>
-      </nav>
-    </header>
-
+                      <a id="carrito_compra" class="btn btn-dark" class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
+                        <i class="fa-solid fa-cart-shopping" style="color: #ff5900;"> Carrito</i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+  </header> 
+  
+  <div class="offcanvas offcanvas-bottom " tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasBottomLabel">Carrito de compra</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body small" id="informacion_compras">
+      
+    </div>
+  </div>
     
 
     <script src="js/carrito_compra.js"></script>

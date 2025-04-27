@@ -9,6 +9,13 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(data => {
             // Acceder al arreglo dentro de la clave "componentes"
             const productos = data.componentes;
+            
+            // Asegurarse de que cada producto tenga un ID único
+            productos.forEach((producto, index) => {
+                if (!producto.id) {
+                    producto.id = index + 1;
+                }
+            });
 
             // Guardar la información en el localStorage
             localStorage.setItem("productos", JSON.stringify(productos));
@@ -53,9 +60,9 @@ function imprimir_productos(filtros = []) {
     let productosFiltrados = productos;
     if (filtros.length > 0) {
         productosFiltrados = productos.filter(producto => 
-        filtros.some(filtro => filtro.toLowerCase() === producto.tipo.toLowerCase())
-    );
-}
+            filtros.some(filtro => filtro.toLowerCase() === producto.tipo.toLowerCase())
+        );
+    }
 
     // Mostrar los productos
     for (let i = 0; i < productosFiltrados.length; i++) {
@@ -96,13 +103,48 @@ function imprimir_productos(filtros = []) {
         // Crear descripción
         const descripcion = document.createElement("p");
         descripcion.className = "card-text small";
-        descripcion.innerHTML = `Precio: ${formatearPrecio(producto.precio)}<br>Cantidad: ${producto.cantidad}`;
+        descripcion.innerHTML = `Precio: ${formatearPrecio(producto.precio)}<br>Cantidad disponible: ${producto.cantidad}`;
+
+        // Disponibilidad del producto
+        const disponibilidad = document.createElement("span");
+        if (producto.cantidad > 0) {
+            disponibilidad.textContent = "Disponible";
+            disponibilidad.className = "badge bg-success";
+        } else {
+            disponibilidad.textContent = "Agotado";
+            disponibilidad.className = "badge bg-danger";
+        }
+
+        // Crear botón para añadir al carrito
+        const btnComprar = document.createElement("button");
+        btnComprar.className = "btn btn-primary w-100 mt-2 btn-agregar-carrito"; 
+        btnComprar.textContent = "Añadir al carrito";
+        btnComprar.disabled = producto.cantidad <= 0; // Deshabilitar si no hay stock
+        btnComprar.dataset.id = producto.id; 
 
         // Ensamblar todos los componentes
         imgContainer.appendChild(img);
         carta_mostrar.appendChild(imgContainer);
         cardBody.appendChild(titulo);
         cardBody.appendChild(descripcion);
+        cardBody.appendChild(disponibilidad);
+        cardBody.appendChild(btnComprar); 
+        carta_mostrar.appendChild(cardBody);
+        colDiv.appendChild(carta_mostrar);
+        div_mostrar.appendChild(colDiv);
+
+        // Añadir evento al botón
+        btnComprar.addEventListener('click', function() {
+            agregarAlCarrito(producto); // Llamar a la función para añadir al carrito
+        });
+
+        // Ensamblar todos los componentes
+        imgContainer.appendChild(img);
+        carta_mostrar.appendChild(imgContainer);
+        cardBody.appendChild(titulo);
+        cardBody.appendChild(descripcion);
+        cardBody.appendChild(disponibilidad);
+        cardBody.appendChild(btnComprar); 
         carta_mostrar.appendChild(cardBody);
         colDiv.appendChild(carta_mostrar);
         div_mostrar.appendChild(colDiv);
@@ -116,15 +158,6 @@ function formatearPrecio(precio) {
         style: 'currency',
         currency: 'COP'
     });
-}
-
-// Función para agregar al carrito (ejemplo)
-function agregarAlCarrito(producto) {
-    // Implementar lógica para agregar al carrito
-    console.log(`Producto añadido al carrito: ${producto.marca} ${producto.modelo}`);
-    
-    // Mostrar notificación
-    alert(`¡${producto.tipo} ${producto.marca} ${producto.modelo} añadido al carrito!`);
 }
 
 // Configurar filtros
