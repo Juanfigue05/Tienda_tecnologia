@@ -423,15 +423,28 @@ footer ul li {
 }
 
 .btn-agregar-carrito {
-    background-color: #ff5900;
-    border-color: #ff5900;
+    background-color: #000000;
+    border-color: gold;
+    color: gold;
+    box-shadow: 1px 1px 5px gold;
 }
 
-.btn-agregar-carrito:hover {
-    background-color: #e65100;
-    border-color: #e65100;
+.btn-agregar-carrito:hover{
+    background-color: gold;
+    color: black;
+    border: 1px solid gold;
+    text-shadow: 1px 1px 5px black;
+    box-shadow: 1px 1px 5px black;
 }
-
+/* Estilo para productos agotados */
+.btn-agregar-carrito:disabled {
+    background-color: gold;
+    color: black;
+    border: 1px solid gold;
+    text-shadow: -1.5px 2px 4px black;
+    box-shadow: 1px 1px 5px black;
+    cursor: not-allowed;
+}
 #informacion_compras .table img {
     object-fit: contain;
 }
@@ -455,10 +468,7 @@ footer ul li {
     font-size: 12px;
 }
 
-/* Estilo para productos agotados */
-.btn-agregar-carrito:disabled {
-    cursor: not-allowed;
-}
+
 
 /* Animación para agregar al carrito */
 @keyframes agregado {

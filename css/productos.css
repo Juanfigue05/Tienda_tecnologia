@@ -64,6 +64,10 @@
 .producto-card:hover .img-container img {
     transform: scale(1.05);
 }
+.btn-agregar-carrito{
+    margin-top: 10px;
+    width: 100%;
+}
 
 /* Estilos para la barra de filtros */
 .form-check-input:checked {
@@ -72,16 +76,27 @@
 }
 
 /* Mejora visual para los botones de filtrado */
-#btn-aplicar-filtros {
-    font-weight: 600;
-}
-
-#btn-limpiar-filtros {
+#limpiar_filtros {
     transition: all 0.3s;
+    color: black;
 }
 
-#btn-limpiar-filtros:hover {
-    background-color: #f8f9fa23;
+#limpiar_filtros:hover {
+    background-color: #1cfdc5;
+    color: black;
+}
+
+/* Color boton de filtro en productos.html */
+#aplicar_filtros{
+    font-weight: 600;
+    background-color: black;
+    color: gold;
+    border: 1px solid gold;
+}
+#aplicar_filtros:hover{
+    background-color: gold;
+    color: black;
+    border: 1px solid gold;
 }
 
 /* Mejora para el título de cada producto */

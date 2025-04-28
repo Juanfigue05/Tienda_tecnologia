@@ -117,10 +117,13 @@ function imprimir_productos(filtros = []) {
 
         // Crear botón para añadir al carrito
         const btnComprar = document.createElement("button");
-        btnComprar.className = "btn btn-primary w-100 mt-2 btn-agregar-carrito"; 
+        btnComprar.className = "btn btn-primary btn-agregar-carrito"; 
         btnComprar.textContent = "Añadir al carrito";
         btnComprar.disabled = producto.cantidad <= 0; // Deshabilitar si no hay stock
         btnComprar.dataset.id = producto.id; 
+        if(btnComprar.disabled==true){
+            btnComprar.className = "btn btn-primary btn-agregar-carrito"; 
+        }
 
         // Ensamblar todos los componentes
         imgContainer.appendChild(img);
