@@ -53,19 +53,19 @@ const url = "./otros/componentes.json";
 fetch(url)
     .then(response => response.json())
     .then(data => {
-        if (!sessionStorage.getItem("productos")) { // Solo inicializa si no hay datos en sessionStorage
-            sessionStorage.setItem("productos", JSON.stringify(data.componentes));
-            console.log("Datos iniciales guardados en sessionStorage:", data.componentes);
+        if (!localStorage.getItem("productos")) { // Solo inicializa si no hay datos en localStorage
+            localStorage.setItem("productos", JSON.stringify(data.componentes));
+            console.log("Datos iniciales guardados en localStorage:", data.componentes);
         }
 
         // Mostrar los datos en consola del JSON
-        const productos = JSON.parse(sessionStorage.getItem("productos"));
+        const productos = JSON.parse(localStorage.getItem("productos"));
         console.log("Datos del JSON:", productos);
     })
     .catch(error => console.error('Error al cargar el JSON:', error));
 
 function imprimir_tipo() {
-    const productos = JSON.parse(sessionStorage.getItem("productos")) || [];
+    const productos = JSON.parse(localStorage.getItem("productos")) || [];
     
     // Crear un Set para almacenar tipos únicos
     const tiposUnicos = new Set();
@@ -98,7 +98,7 @@ function imprimir_tipo() {
 }
 
 function imprimir_tipo_modificar() {
-    const productos = JSON.parse(sessionStorage.getItem("productos")) || [];
+    const productos = JSON.parse(localStorage.getItem("productos")) || [];
     const tipo_modificar = document.getElementById("tipo_modificar");
 
     if (!tipo_modificar) return; // Asegurarse de que el elemento existe
@@ -126,7 +126,7 @@ function imprimir_tipo_modificar() {
 }
 
 function imprimir_marca() {
-    const productos = JSON.parse(sessionStorage.getItem("productos")) || [];
+    const productos = JSON.parse(localStorage.getItem("productos")) || [];
     const tipo = document.getElementById("tipo");
     const marca = document.getElementById("marca");
     
@@ -156,7 +156,7 @@ function imprimir_marca() {
 }
 
 function imprimir_marca_modificar() {
-    const productos = JSON.parse(sessionStorage.getItem("productos")) || [];
+    const productos = JSON.parse(localStorage.getItem("productos")) || [];
     const tipo_modificar = document.getElementById("tipo_modificar");
     const marca_modificar = document.getElementById("marca_modificar");
 
@@ -187,7 +187,7 @@ function imprimir_marca_modificar() {
 }
 
 function imprimir_modelo() {
-    const productos = JSON.parse(sessionStorage.getItem("productos")) || [];
+    const productos = JSON.parse(localStorage.getItem("productos")) || [];
     const tipo = document.getElementById("tipo");
     const marca = document.getElementById("marca");
     const modelo = document.getElementById("modelo");
@@ -218,7 +218,7 @@ function imprimir_modelo() {
 }
 
 function imprimir_modelo_modificar() {
-    const productos = JSON.parse(sessionStorage.getItem("productos")) || [];
+    const productos = JSON.parse(localStorage.getItem("productos")) || [];
     const tipo_modificar = document.getElementById("tipo_modificar");
     const marca_modificar = document.getElementById("marca_modificar");
     const modelo_modificar = document.getElementById("modelo_modificar");
@@ -256,7 +256,7 @@ document.addEventListener('DOMContentLoaded', function() {
         boton_agregar_productos.addEventListener('click', function(event) {
             event.preventDefault(); // Prevenir que la página se recargue
 
-            const productos = JSON.parse(sessionStorage.getItem("productos")) || [];
+            const productos = JSON.parse(localStorage.getItem("productos")) || [];
             const tipo = document.getElementById("tipo");
             const marca = document.getElementById("marca");
             const modelo = document.getElementById("modelo");
@@ -292,9 +292,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
 
-            // Guardar el arreglo actualizado en el sessionStorage
-            sessionStorage.setItem("productos", JSON.stringify(productos));
-            console.log("Productos actualizados guardados en sessionStorage:", productos);
+            // Guardar el arreglo actualizado en el localStorage
+            localStorage.setItem("productos", JSON.stringify(productos));
+            console.log("Productos actualizados guardados en localStorage:", productos);
 
             // Actualizar la tabla después de guardar
             imprimir_productos();
@@ -307,8 +307,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Función para cargar ventas al cargar la página
 document.addEventListener('DOMContentLoaded', function () {
-    // Obtener las ventas desde sessionStorage
-    const ventas = JSON.parse(sessionStorage.getItem('ventas')) || [];
+    // Obtener las ventas desde localStorage
+    const ventas = JSON.parse(localStorage.getItem('ventas')) || [];
     const informeVentasTabla = document.getElementById('informe_ventas_tabla');
     const totalGananciaElemento = document.getElementById('total_vendido');
     
@@ -344,7 +344,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     totalGananciaElemento.textContent = formatearPrecio(totalGanancia);
 
-    sessionStorage.setItem('totalGanancia', totalGanancia.toString());
+    localStorage.setItem('totalGanancia', totalGanancia.toString());
 });
 
 // Función para formatear el precio
@@ -359,7 +359,7 @@ function imprimir_productos(filtroTipo = "") {
     const tabla = document.getElementById("inventario_tabla");
     if (!tabla) return;
     
-    const productos = JSON.parse(sessionStorage.getItem("productos")) || [];
+    const productos = JSON.parse(localStorage.getItem("productos")) || [];
 
     tabla.innerHTML = "";
     
@@ -449,7 +449,7 @@ document.addEventListener('DOMContentLoaded', function() {
         formularioModificarPrecio.addEventListener("submit", function (e) {
             e.preventDefault(); // Evitar que la página se recargue
 
-            const productos = JSON.parse(sessionStorage.getItem("productos")) || [];
+            const productos = JSON.parse(localStorage.getItem("productos")) || [];
             const tipo = document.getElementById("tipo_modificar").value;
             const marca = document.getElementById("marca_modificar").value;
             const modelo = document.getElementById("modelo_modificar").value;
@@ -474,7 +474,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Actualizar el precio del producto
             producto.precio = nuevoPrecio;
-            sessionStorage.setItem("productos", JSON.stringify(productos));
+            localStorage.setItem("productos", JSON.stringify(productos));
 
             alert("El precio del producto "+producto.tipo + " - " + producto.marca + " - " + producto.modelo + " ha sido actualizado a " + nuevoPrecio.toLocaleString('es-CL', { style: 'currency', currency: 'COP' }) + ".");
 
@@ -488,7 +488,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function llenarFiltroTipo() {
-    const productos = JSON.parse(sessionStorage.getItem("productos")) || [];
+    const productos = JSON.parse(localStorage.getItem("productos")) || [];
     const filtroTipo = document.getElementById("filtro_tipo");
     
     if (!filtroTipo) return;

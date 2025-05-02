@@ -1,8 +1,8 @@
 // carrito_compra.js
 document.addEventListener('DOMContentLoaded', function() {
-    // Inicializar el carrito desde sessionStorage o crear uno nuevo si no existe
-    let carrito = JSON.parse(sessionStorage.getItem('carrito')) || [];
-    let total = parseFloat(sessionStorage.getItem('totalCarrito')) || 0;
+    // Inicializar el carrito desde localStorage o crear uno nuevo si no existe
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    let total = parseFloat(localStorage.getItem('totalCarrito')) || 0;
     
     // Actualizar contador y total en todas las páginas
     actualizarContadorCarrito();
@@ -32,8 +32,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function agregarAlCarrito(productId) {
-        // Obtener productos del sessionStorage
-        const productos = JSON.parse(sessionStorage.getItem('productos'));
+        // Obtener productos del localStorage
+        const productos = JSON.parse(localStorage.getItem('productos'));
         
         // Buscar el producto por ID
         const producto = productos.find(item => item.id === parseInt(productId));
@@ -85,12 +85,12 @@ document.addEventListener('DOMContentLoaded', function() {
         // Actualizar el total del carrito
         calcularTotal();
         
-        // Actualizar productos y carrito en sessionStorage
-        sessionStorage.setItem('productos', JSON.stringify(productos));
-        sessionStorage.setItem('carrito', JSON.stringify(carrito));
-        sessionStorage.setItem('totalCarrito', total.toString());
+        // Actualizar productos y carrito en localStorage
+        localStorage.setItem('productos', JSON.stringify(productos));
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+        localStorage.setItem('totalCarrito', total.toString());
         
-        const filtrosSeleccionados = JSON.parse(sessionStorage.getItem('filtrosSeleccionados')) || [];
+        const filtrosSeleccionados = JSON.parse(localStorage.getItem('filtrosSeleccionados')) || [];
         imprimir_productos(filtrosSeleccionados);
         
         actualizarContadorCarrito();
@@ -101,8 +101,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Función para eliminar productos del carrito
     function eliminarDelCarrito(productId) {
-        // Obtener productos del sessionStorage
-        const productos = JSON.parse(sessionStorage.getItem('productos'));
+        // Obtener productos del localStorage
+        const productos = JSON.parse(localStorage.getItem('productos'));
         
         // Encontrar el producto en el carrito
         const itemIndex = carrito.findIndex(item => item.id === parseInt(productId));
@@ -120,15 +120,15 @@ document.addEventListener('DOMContentLoaded', function() {
         if (productoOriginal) {
             // Devolver existencias al producto original
             productoOriginal.cantidad += itemEnCarrito.cantidad;
-            sessionStorage.setItem('productos', JSON.stringify(productos));
+            localStorage.setItem('productos', JSON.stringify(productos));
         }
         
         carrito.splice(itemIndex, 1);
         
         calcularTotal();
         
-        sessionStorage.setItem('carrito', JSON.stringify(carrito));
-        sessionStorage.setItem('totalCarrito', total.toString());
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+        localStorage.setItem('totalCarrito', total.toString());
         
         actualizarContadorCarrito();
         actualizarVistaCarrito();
@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Función para calcular el total del carrito
     function calcularTotal() {
         total = carrito.reduce((sum, item) => sum + item.subtotal, 0); //calcular el total de los subtotales de los elementos en el carrito de compras
-        sessionStorage.setItem('totalCarrito', total.toString());
+        localStorage.setItem('totalCarrito', total.toString());
         return total;
     }
     
@@ -294,8 +294,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Función para vaciar el carrito
     function vaciarCarrito() {
         if (confirm('¿Estás seguro de que deseas vaciar el carrito?')) {
-            // Obtener productos del sessionStorage
-            const productos = JSON.parse(sessionStorage.getItem('productos'));
+            // Obtener productos del localStorage
+            const productos = JSON.parse(localStorage.getItem('productos'));
             
             // Devolver existencias a los productos originales
             carrito.forEach(item => {
@@ -305,13 +305,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
             
-            sessionStorage.setItem('productos', JSON.stringify(productos));
+            localStorage.setItem('productos', JSON.stringify(productos));
             
             // Limpiar carrito
             carrito = [];
             total = 0;
-            sessionStorage.setItem('carrito', JSON.stringify(carrito));
-            sessionStorage.setItem('totalCarrito', total.toString());
+            localStorage.setItem('carrito', JSON.stringify(carrito));
+            localStorage.setItem('totalCarrito', total.toString());
             
             actualizarContadorCarrito();
             actualizarVistaCarrito();
@@ -325,8 +325,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Función para finalizar la compra
 function finalizarCompra() {
-    // Obtener las ventas existentes en sessionStorage o inicializar un arreglo vacío
-    const ventas = JSON.parse(sessionStorage.getItem('ventas')) || [];
+    // Obtener las ventas existentes en localStorage o inicializar un arreglo vacío
+    const ventas = JSON.parse(localStorage.getItem('ventas')) || [];
     const numeroVenta = ventas.length > 0 ? ventas[ventas.length - 1].numeroVenta + 1 : 1; // Incrementar el número de venta
 
     // Obtener la fecha y hora actual
@@ -348,8 +348,8 @@ function finalizarCompra() {
         });
     });
 
-    // Guardar las ventas actualizadas en sessionStorage
-    sessionStorage.setItem('ventas', JSON.stringify(ventas));
+    // Guardar las ventas actualizadas en localStorage
+    localStorage.setItem('ventas', JSON.stringify(ventas));
 
     // Mostrar mensaje de agradecimiento
     alert('¡Gracias por tu compra! Total: ' + formatearPrecio(total));
@@ -357,8 +357,8 @@ function finalizarCompra() {
     // Limpiar carrito y no devolver existencias a productos
     carrito = [];
     total = 0;
-    sessionStorage.setItem('carrito', JSON.stringify(carrito));
-    sessionStorage.setItem('totalCarrito', total.toString());
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+    localStorage.setItem('totalCarrito', total.toString());
 
     actualizarContadorCarrito();
     actualizarVistaCarrito();

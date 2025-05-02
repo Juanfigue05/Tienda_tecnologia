@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const filtro = sessionStorage.getItem("valorDiv_carta");
+    const filtro = localStorage.getItem("valorDiv_carta");
     console.log("Div seleccionado:", filtro);
 
-    // Verificar si ya existen productos en el sessionStorage
-    let productos = JSON.parse(sessionStorage.getItem("productos"));
+    // Verificar si ya existen productos en el localStorage
+    let productos = JSON.parse(localStorage.getItem("productos"));
 
     if (!productos) {
-        // Si no existen productos en el sessionStorage, cargar desde el JSON
+        // Si no existen productos en el localStorage, cargar desde el JSON
         const url = "./otros/componentes.json";
         fetch(url)
             .then(response => response.json())
@@ -21,17 +21,17 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                 });
 
-                // Guardar los productos en el sessionStorage
-                sessionStorage.setItem("productos", JSON.stringify(productos));
-                console.log("Datos guardados en el sessionStorage:", productos);
+                // Guardar los productos en el localStorage
+                localStorage.setItem("productos", JSON.stringify(productos));
+                console.log("Datos guardados en el localStorage:", productos);
 
                 // Mostrar productos según el filtro
                 mostrarProductosConFiltro(filtro, productos);
             })
             .catch(error => console.error('Error al cargar el JSON:', error));
     } else {
-        // Si ya existen productos en el sessionStorage, usarlos directamente
-        console.log("Productos cargados desde el sessionStorage:", productos);
+        // Si ya existen productos en el localStorage, usarlos directamente
+        console.log("Productos cargados desde el localStorage:", productos);
         mostrarProductosConFiltro(filtro, productos);
     }
 });
@@ -59,8 +59,8 @@ function mostrarProductosConFiltro(filtro, productos) {
 // Función para imprimir todos los productos
 function imprimir_productos(filtros = []) {
     const div_mostrar = document.getElementById("productos");
-    const productos = JSON.parse(sessionStorage.getItem("productos"));
-    console.log("Productos cargados desde sessionStorage:", productos);
+    const productos = JSON.parse(localStorage.getItem("productos"));
+    console.log("Productos cargados desde localStorage:", productos);
 
     if (!Array.isArray(productos)) {
         console.error("Error: 'productos' no es un arreglo.");
@@ -69,9 +69,9 @@ function imprimir_productos(filtros = []) {
 
     div_mostrar.innerHTML = "";
 
-    // Recuperar los filtros desde el sessionStorage si no se pasan como argumento
+    // Recuperar los filtros desde el localStorage si no se pasan como argumento
     if (filtros.length === 0) {
-        const filtrosGuardados = JSON.parse(sessionStorage.getItem('filtrosSeleccionados')) || [];
+        const filtrosGuardados = JSON.parse(localStorage.getItem('filtrosSeleccionados')) || [];
         filtros = filtrosGuardados;
     }
 
@@ -205,7 +205,7 @@ function aplicarFiltros() {
     const checkboxes = document.querySelectorAll('.filtro-categoria:checked');
     const filtros_Seleccionados = Array.from(checkboxes).map(checkbox => checkbox.value); //convierte una colección de checkboxes en un arreglo 
 
-    sessionStorage.setItem('filtrosSeleccionados', JSON.stringify(filtrosSeleccionados));
+    localStorage.setItem('filtrosSeleccionados', JSON.stringify(filtrosSeleccionados));
 
     imprimir_productos(filtros_Seleccionados);
 }
