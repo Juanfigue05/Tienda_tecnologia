@@ -9,8 +9,20 @@ document.addEventListener('DOMContentLoaded', function () {
         // Si no existen productos en el localStorage, cargar desde el JSON
         const url = "./otros/componentes.json";
         fetch(url)
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Error al cargar el JSON');
+                }
+                return response.json();
+            })
             .then(data => {
+                if (data && Array.isArray(data.componentes)) {
+                    localStorage.setItem('productos', JSON.stringify(data.componentes));
+                    console.log("Datos guardados en el localStorage:", data.componentes);
+                } else {
+                    console.error("Estructura de datos inválida en el JSON");
+                }
+
                 // Acceder al arreglo dentro de la clave "componentes"
                 productos = data.componentes;
 
@@ -20,10 +32,6 @@ document.addEventListener('DOMContentLoaded', function () {
                         producto.id = index + 1;
                     }
                 });
-
-                // Guardar los productos en el localStorage
-                localStorage.setItem("productos", JSON.stringify(productos));
-                console.log("Datos guardados en el localStorage:", productos);
 
                 // Mostrar productos según el filtro
                 mostrarProductosConFiltro(filtro, productos);
@@ -222,6 +230,7 @@ function limpiarFiltros() {
     checkboxes.forEach(checkbox => {
         checkbox.checked = false; // Desmarcar todos los checkboxes
     });
+    localStorage.removeItem('filtrosSeleccionados');
 
     console.log("Filtros limpiados. Mostrando todos los productos.");
     imprimir_productos(); // Llamar a imprimir_productos sin filtros
