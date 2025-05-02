@@ -203,11 +203,17 @@ document.addEventListener('DOMContentLoaded', function() {
 // Función para aplicar filtros
 function aplicarFiltros() {
     const checkboxes = document.querySelectorAll('.filtro-categoria:checked');
-    const filtros_Seleccionados = Array.from(checkboxes).map(checkbox => checkbox.value); //convierte una colección de checkboxes en un arreglo 
+    const filtrosSeleccionados = Array.from(checkboxes).map(checkbox => checkbox.value); // Convertir a un arreglo de valores
 
     localStorage.setItem('filtrosSeleccionados', JSON.stringify(filtrosSeleccionados));
 
-    imprimir_productos(filtros_Seleccionados);
+    if (filtrosSeleccionados.length > 0) {
+        console.log("Filtros aplicados:", filtrosSeleccionados);
+        imprimir_productos(filtrosSeleccionados); // Mostrar productos filtrados
+    } else {
+        console.log("No se seleccionaron filtros. Mostrando todos los productos.");
+        imprimir_productos(); // Mostrar todos los productos si no hay filtros
+    }
 }
 
 // Función para limpiar filtros
