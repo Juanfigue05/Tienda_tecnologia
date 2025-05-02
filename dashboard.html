@@ -56,7 +56,35 @@
 
     <div id="consultar_inventario">
         <div class="container">
-            <h2>Consultar Inventario</h2>
+            <h3>Modificar Precio</h3>
+            <div id="modificar_precio">
+                <form id="formularioModificarPrecio" class="mt-4">
+                    <h2>Modificar Precio</h2>
+                    <div class="m-5">
+                        <label for="tipo_modificar" class="form-label">Tipo de Producto</label>
+                        <select id="tipo_modificar" class="form-control" required>
+                        </select>
+                        <label for="marca_modificar" class="form-label">Marca del Producto</label>
+                        <select id="marca_modificar" class="form-control" required>
+                        </select>
+                        <label for="modelo_modificar" class="form-label">Modelo del Producto</label>
+                        <select id="modelo_modificar" class="form-control" required>
+                        </select>
+                        <label for="nuevo_precio" class="form-label mt-3">Nuevo Precio</label>
+                        <input type="number" class="form-control" id="nuevo_precio" placeholder="Ingrese el nuevo precio" required>
+                        <div class="text-center mt-3 pb-5">
+                            <button type="submit" class="btn btn-success">Guardar Cambios</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <h3>Consultar Inventario</h3>
+            <div class="mb-3">
+                <label for="filtro_tipo" class="form-label">Filtrar por Tipo</label>
+                <select id="filtro_tipo" class="form-control">
+                    <option value="">-- Todos los Tipos --</option>
+                </select>
+            </div>
             <table class="table table-striped">
                 <thead class="table-dark">
                     <tr>
@@ -69,46 +97,31 @@
                     </tr>
                 </thead>
                 <tbody id="inventario_tabla">
-                    <!-- Aquí se llenarán las filas de la tabla con JavaScript -->
+
                 </tbody>
             </table>
-            <h3>Modificar Precio</h3>
-            <form action="">
-                <div class="mb-3">
-                    <label for="tipo" class="form-label">Nombre del producto</label>
-                    <select name="" id="tipo" class="form-control">
-                        <option value="" disabled>Seleccione el producto</option>
-                    </select>
-                    <label for="modificar_precio" class="form-label">Precio</label>
-                    <input type="number" class="form-control" id="modificar_precio" required>
-                </div>
-                <div class="text-center">
-                    <button class="btn btn-success " type="submit">Guardar Cambios</button>
-                </div>
-            </form>
         </div>
     </div>
 
     <div id="informe_ventas">
-            
-            <div class="container">
-                <h2>Informe de Ventas</h2>
-                <table class="table table-striped">
-                    <thead class="table-dark">
-                        <tr>
-                            <th>#venta</th>
-                            <th>Producto</th>
-                            <th>Cantidad Vendida</th>
-                            <th>Total</th>
-                            <th>Fecha venta</th>
-                        </tr>
-                    </thead>
-                    <tbody id="informe_ventas_tabla">
-                        <!-- Aquí se llenarán las filas de la tabla con JavaScript -->
-                    </tbody>
-                </table>
-                <h3>Total Vendido</h3><p id="total_vendido"></p>
-            </div>
+        <div class="container">
+            <h2>Informe de Ventas</h2>
+            <table class="table table-striped">
+                <thead class="table-dark">
+                    <tr>
+                        <th>#venta</th>
+                        <th>Producto</th>
+                        <th>Cantidad Vendida</th>
+                        <th>Total</th>
+                        <th>Fecha venta</th>
+                    </tr>
+                </thead>
+                <tbody id="informe_ventas_tabla">
+                    <!-- Aquí se llenarán las filas de la tabla con JavaScript -->
+                </tbody>
+            </table>
+            <h3>Total Vendido</h3><p id="total_vendido"></p>
+        </div>
     </div>
     
 
