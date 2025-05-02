@@ -1,8 +1,8 @@
 // carrito_compra.js
 document.addEventListener('DOMContentLoaded', function() {
-    // Inicializar el carrito desde localStorage o crear uno nuevo si no existe
-    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-    let total = parseFloat(localStorage.getItem('totalCarrito')) || 0;
+    // Inicializar el carrito desde sessionStorage o crear uno nuevo si no existe
+    let carrito = JSON.parse(sessionStorage.getItem('carrito')) || [];
+    let total = parseFloat(sessionStorage.getItem('totalCarrito')) || 0;
     
     // Actualizar contador y total en todas las páginas
     actualizarContadorCarrito();
@@ -31,10 +31,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Función para agregar productos al carrito
     function agregarAlCarrito(productId) {
-        // Obtener productos del localStorage
-        const productos = JSON.parse(localStorage.getItem('productos'));
+        // Obtener productos del sessionStorage
+        const productos = JSON.parse(sessionStorage.getItem('productos'));
         
         // Buscar el producto por ID
         const producto = productos.find(item => item.id === parseInt(productId));
@@ -44,7 +43,6 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
         
-        // Verificar si hay existencias
         if (producto.cantidad <= 0) {
             alert('Lo sentimos, este producto está agotado');
             return;
@@ -67,6 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         } else {
             // Si no está en el carrito, agregar con cantidad 1
+            console.log(producto.cantidad);
             carrito.push({
                 id: producto.id,
                 tipo: producto.tipo,
@@ -77,36 +76,33 @@ document.addEventListener('DOMContentLoaded', function() {
                 cantidad: 1,
                 subtotal: producto.precio
             });
-            
+
             // Reducir la existencia en el producto original
             producto.cantidad--;
+            console.log(producto.cantidad);
         }
         
         // Actualizar el total del carrito
         calcularTotal();
         
-        // Actualizar productos y carrito en localStorage
-        localStorage.setItem('productos', JSON.stringify(productos));
-        localStorage.setItem('carrito', JSON.stringify(carrito));
-        localStorage.setItem('totalCarrito', total.toString());
+        // Actualizar productos y carrito en sessionStorage
+        sessionStorage.setItem('productos', JSON.stringify(productos));
+        sessionStorage.setItem('carrito', JSON.stringify(carrito));
+        sessionStorage.setItem('totalCarrito', total.toString());
         
-        // Actualizar vista
+        const filtrosSeleccionados = JSON.parse(sessionStorage.getItem('filtrosSeleccionados')) || [];
+        imprimir_productos(filtrosSeleccionados);
+        
         actualizarContadorCarrito();
         actualizarVistaCarrito();
         
-        // Si estamos en la página de productos, actualizar la vista de productos
-        if (typeof imprimir_productos === 'function') {
-            imprimir_productos();
-        }
-        
-        // Mostrar notificación
-        alert(`¡${producto.tipo} ${producto.marca} ${producto.modelo} añadido al carrito!`);
+        alert(producto.tipo+" "+producto.marca+" "+producto.modelo + " añadido al carrito!. ");
     }
     
     // Función para eliminar productos del carrito
     function eliminarDelCarrito(productId) {
-        // Obtener productos del localStorage
-        const productos = JSON.parse(localStorage.getItem('productos'));
+        // Obtener productos del sessionStorage
+        const productos = JSON.parse(sessionStorage.getItem('productos'));
         
         // Encontrar el producto en el carrito
         const itemIndex = carrito.findIndex(item => item.id === parseInt(productId));
@@ -115,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
             console.error('Producto no encontrado en el carrito');
             return;
         }
-        
+        // item del carrito que se va a eliminar
         const itemEnCarrito = carrito[itemIndex];
         
         // Encontrar el producto original para devolver las existencias
@@ -124,20 +120,16 @@ document.addEventListener('DOMContentLoaded', function() {
         if (productoOriginal) {
             // Devolver existencias al producto original
             productoOriginal.cantidad += itemEnCarrito.cantidad;
-            localStorage.setItem('productos', JSON.stringify(productos));
+            sessionStorage.setItem('productos', JSON.stringify(productos));
         }
         
-        // Eliminar del carrito
         carrito.splice(itemIndex, 1);
         
-        // Actualizar total
         calcularTotal();
         
-        // Actualizar localStorage
-        localStorage.setItem('carrito', JSON.stringify(carrito));
-        localStorage.setItem('totalCarrito', total.toString());
+        sessionStorage.setItem('carrito', JSON.stringify(carrito));
+        sessionStorage.setItem('totalCarrito', total.toString());
         
-        // Actualizar vista
         actualizarContadorCarrito();
         actualizarVistaCarrito();
         
@@ -149,8 +141,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Función para calcular el total del carrito
     function calcularTotal() {
-        total = carrito.reduce((sum, item) => sum + item.subtotal, 0);
-        localStorage.setItem('totalCarrito', total.toString());
+        total = carrito.reduce((sum, item) => sum + item.subtotal, 0); //calcular el total de los subtotales de los elementos en el carrito de compras
+        sessionStorage.setItem('totalCarrito', total.toString());
         return total;
     }
     
@@ -174,63 +166,50 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
         
-        // Crear el contenedor principal
         const div_mostrar = document.createElement('div');
         div_mostrar.className = "row";
         
-        // Recorrer los productos del carrito
         for (let i = 0; i < carrito.length; i++) {
             const item = carrito[i];
-    
-            // Crear columna responsiva
             const colDiv = document.createElement('div');
-            colDiv.className = "col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-4";
-    
-            // Crear la tarjeta del producto
             const carta_mostrar = document.createElement('div');
-            carta_mostrar.className = "card h-100 shadow-sm producto-card";
-    
-            // Crear contenedor para la imagen
             const imgContainer = document.createElement('div');
+            const img = document.createElement("img");
+            const cardBody = document.createElement("div");
+            const titulo = document.createElement("h5");
+            const descripcion = document.createElement("p");
+            const btnContainer = document.createElement("div");
+            const btnEliminar = document.createElement("button");
+
+            colDiv.className = "col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-4";
+            carta_mostrar.className = "card h-100 shadow-sm producto-card";
             imgContainer.className = "img-container text-center p-3";
-            imgContainer.style.height = "200px";
+            imgContainer.style.height = "150px";
             imgContainer.style.display = "flex";
             imgContainer.style.alignItems = "center";
             imgContainer.style.justifyContent = "center";
-    
-            // Crear la imagen
-            const img = document.createElement("img");
+
             img.src = item.img;
             img.className = "img-fluid";
-            img.style.maxHeight = "180px";
+            img.style.maxHeight = "120px";
             img.alt = item.modelo;
-    
-            // Cuerpo de la tarjeta
-            const cardBody = document.createElement("div");
+
             cardBody.className = "card-body";
-    
-            // Crear título
-            const titulo = document.createElement("h5");
             titulo.className = "card-title";
-            titulo.textContent = `${item.tipo} - ${item.marca} - ${item.modelo}`;
-    
-            // Crear descripción
-            const descripcion = document.createElement("p");
+            titulo.textContent = item.tipo + ' - ' + item.marca + ' - ' + item.modelo;
             descripcion.className = "card-text small";
-            descripcion.innerHTML = `Precio: ${formatearPrecio(item.precio)}<br>Cantidad: ${item.cantidad}<br>Subtotal: ${formatearPrecio(item.subtotal)}`;
-            
-            // Crear botón de eliminar
-            const btnContainer = document.createElement("div");
+            descripcion.innerHTML = `
+                <strong>Precio:</strong> ${formatearPrecio(item.precio)}<br>
+                <strong>Cantidad:</strong> ${item.cantidad}<br>
+                <strong>Subtotal:</strong> ${formatearPrecio(item.subtotal)}
+            `;
+
             btnContainer.className = "d-flex justify-content-end mt-2";
-            
-            const btnEliminar = document.createElement("button");
             btnEliminar.className = "btn btn-danger btn-sm btn-eliminar";
             btnEliminar.dataset.id = item.id;
             btnEliminar.innerHTML = '<i class="fa-solid fa-trash"></i>';
-            
+
             btnContainer.appendChild(btnEliminar);
-    
-            // Ensamblar todos los componentes
             imgContainer.appendChild(img);
             carta_mostrar.appendChild(imgContainer);
             cardBody.appendChild(titulo);
@@ -241,58 +220,49 @@ document.addEventListener('DOMContentLoaded', function() {
             div_mostrar.appendChild(colDiv);
         }
         
-        // Crear el resumen del carrito (total y botones)
         const resumenContainer = document.createElement('div');
-        resumenContainer.className = "col-12";
-        
         const resumenCard = document.createElement('div');
-        resumenCard.className = "card shadow-sm";
-        
         const resumenBody = document.createElement('div');
-        resumenBody.className = "card-body";
-        
         const totalRow = document.createElement('div');
-        totalRow.className = "d-flex justify-content-between align-items-center mb-3";
-        
         const totalLabel = document.createElement('h5');
+        const totalValue = document.createElement('h5');
+        const buttonsRow = document.createElement('div');
+        const btnVaciar = document.createElement('button');
+        const btnFinalizar = document.createElement('button');
+
+        resumenContainer.className = "col-12";
+        resumenCard.className = "card shadow-sm";
+        resumenBody.className = "card-body";
+
+        totalRow.className = "d-flex justify-content-between align-items-center mb-3";
         totalLabel.className = "fw-bold mb-0";
         totalLabel.textContent = "Total:";
-        
-        const totalValue = document.createElement('h5');
         totalValue.className = "fw-bold mb-0";
         totalValue.textContent = formatearPrecio(total);
-        
         totalRow.appendChild(totalLabel);
         totalRow.appendChild(totalValue);
         
-        const buttonsRow = document.createElement('div');
         buttonsRow.className = "d-flex justify-content-end mt-3";
-        
-        const btnVaciar = document.createElement('button');
         btnVaciar.id = "btn-vaciar-carrito";
         btnVaciar.className = "btn btn-outline-danger me-2";
         btnVaciar.textContent = "Vaciar carrito";
         
-        const btnFinalizar = document.createElement('button');
         btnFinalizar.id = "btn-finalizar-compra";
         btnFinalizar.className = "btn btn-primary";
         btnFinalizar.textContent = "Finalizar compra";
-        
+
         buttonsRow.appendChild(btnVaciar);
         buttonsRow.appendChild(btnFinalizar);
-        
+    
         resumenBody.appendChild(totalRow);
         resumenBody.appendChild(buttonsRow);
         resumenCard.appendChild(resumenBody);
         resumenContainer.appendChild(resumenCard);
-        
         div_mostrar.appendChild(resumenContainer);
-        
-        // Limpiar y añadir el contenido al contenedor
+
         carritoContainer.innerHTML = '';
         carritoContainer.appendChild(div_mostrar);
         
-        // Agregar eventos a los botones
         const btnVaciarCarrito = document.getElementById('btn-vaciar-carrito');
         const btnFinalizarCompra = document.getElementById('btn-finalizar-compra');
         
@@ -304,12 +274,11 @@ document.addEventListener('DOMContentLoaded', function() {
             btnFinalizarCompra.addEventListener('click', finalizarCompra);
         }
         
-        // Agregar eventos a los botones de eliminar
         const botonesEliminar = document.querySelectorAll('.btn-eliminar');
         botonesEliminar.forEach(btn => {
             btn.addEventListener('click', (e) => {
                 const id = btn.getAttribute('data-id');
-                eliminarProducto(id);
+                eliminarDelCarrito(id);
             });
         });
     }
@@ -325,8 +294,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Función para vaciar el carrito
     function vaciarCarrito() {
         if (confirm('¿Estás seguro de que deseas vaciar el carrito?')) {
-            // Obtener productos del localStorage
-            const productos = JSON.parse(localStorage.getItem('productos'));
+            // Obtener productos del sessionStorage
+            const productos = JSON.parse(sessionStorage.getItem('productos'));
             
             // Devolver existencias a los productos originales
             carrito.forEach(item => {
@@ -336,16 +305,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
             
-            // Guardar productos actualizados
-            localStorage.setItem('productos', JSON.stringify(productos));
+            sessionStorage.setItem('productos', JSON.stringify(productos));
             
             // Limpiar carrito
             carrito = [];
             total = 0;
-            localStorage.setItem('carrito', JSON.stringify(carrito));
-            localStorage.setItem('totalCarrito', total.toString());
+            sessionStorage.setItem('carrito', JSON.stringify(carrito));
+            sessionStorage.setItem('totalCarrito', total.toString());
             
-            // Actualizar vistas
             actualizarContadorCarrito();
             actualizarVistaCarrito();
             
@@ -357,17 +324,43 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Función para finalizar la compra
-    function finalizarCompra() {
-        alert('¡Gracias por tu compra! Total: ' + formatearPrecio(total));
-        
-        // Limpiar carrito pero no devolver existencias a productos
-        carrito = [];
-        total = 0;
-        localStorage.setItem('carrito', JSON.stringify(carrito));
-        localStorage.setItem('totalCarrito', total.toString());
-        
-        // Actualizar vistas
-        actualizarContadorCarrito();
-        actualizarVistaCarrito();
-    }
+function finalizarCompra() {
+    // Obtener las ventas existentes en sessionStorage o inicializar un arreglo vacío
+    const ventas = JSON.parse(sessionStorage.getItem('ventas')) || [];
+    const numeroVenta = ventas.length > 0 ? ventas[ventas.length - 1].numeroVenta + 1 : 1; // Incrementar el número de venta
+
+    // Obtener la fecha y hora actual
+    const fechaActual = new Date();
+    const fechaVenta = fechaActual.toLocaleDateString(); // Formato: DD/MM/YYYY
+    const horaVenta = fechaActual.toLocaleTimeString(); // Formato: HH:MM:SS
+
+    // Recorrer los productos del carrito y agregarlos al arreglo de ventas
+    carrito.forEach(item => {
+        ventas.push({
+            numeroVenta: numeroVenta, // Asignar el número de venta
+            tipo: item.tipo,
+            marca: item.marca,
+            modelo: item.modelo,
+            cantidad: item.cantidad,
+            subtotal: item.subtotal,
+            fecha: fechaVenta,
+            hora: horaVenta
+        });
+    });
+
+    // Guardar las ventas actualizadas en sessionStorage
+    sessionStorage.setItem('ventas', JSON.stringify(ventas));
+
+    // Mostrar mensaje de agradecimiento
+    alert('¡Gracias por tu compra! Total: ' + formatearPrecio(total));
+
+    // Limpiar carrito y no devolver existencias a productos
+    carrito = [];
+    total = 0;
+    sessionStorage.setItem('carrito', JSON.stringify(carrito));
+    sessionStorage.setItem('totalCarrito', total.toString());
+
+    actualizarContadorCarrito();
+    actualizarVistaCarrito();
+}
 });

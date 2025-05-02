@@ -365,7 +365,9 @@ footer ul li {
     margin: 0 auto;
 }
 
-/* Para la version del offcanva  en index productos y nosotros html*/
+/* ==========================================
+   ESTILOS PARA LA SECCIÓN "Carrito de Compras"
+   ========================================== */
 #offcanvasBottom{
     background-color: black;
     color: gold;
@@ -449,6 +451,50 @@ footer ul li {
     object-fit: contain;
 }
 
+#informacion_compras .producto-card img {
+    max-width: 80px; /* Ajustar el tamaño de la imagen */
+    max-height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#informacion_compras .producto-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+#informacion_compras .producto-card .info {
+    flex: 1;
+    margin-left: 10px;
+}
+
+#informacion_compras .producto-card .info h5 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+#informacion_compras .producto-card .info p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 5px 0;
+}
+
+#informacion_compras .producto-card .acciones {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#informacion_compras .producto-card .acciones button {
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
 #carrito_compra {
     position: relative;
 }
@@ -468,8 +514,6 @@ footer ul li {
     font-size: 12px;
 }
 
-
-
 /* Animación para agregar al carrito */
 @keyframes agregado {
     0% { transform: scale(1); }
@@ -479,4 +523,68 @@ footer ul li {
 
 .producto-agregado {
     animation: agregado 0.5s ease;
+}
+
+/* ==========================================
+   ESTILOS PARA LA SECCIÓN "SOBRE NOSOTROS"
+   ========================================== */
+   #sobre-nosotros {
+    background-color: #121212;
+    color: #f8f9fa;
+}
+
+#sobre-nosotros .titulo-seccion {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: gold;
+    text-shadow: 2px 2px 5px black;
+    margin-bottom: 1rem;
+}
+
+#sobre-nosotros .descripcion-seccion {
+    font-size: 1.2rem;
+    color: #d3d3d3;
+    margin-bottom: 2rem;
+}
+
+#sobre-nosotros .subtitulo-seccion {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: gold;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#sobre-nosotros .texto-nosotros {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #d3d3d3;
+}
+
+#sobre-nosotros .imagen-nosotros {
+    max-width: 100%;
+    border: 3px solid gold;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+#sobre-nosotros .valores-nosotros {
+    padding: 0;
+    list-style: none;
+}
+
+#sobre-nosotros .valores-nosotros li {
+    text-align: center;
+    color: #f8f9fa;
+}
+
+#sobre-nosotros .icono-valor {
+    font-size: 2rem;
+    color: gold;
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+#sobre-nosotros .icono-valor:hover {
+    transform: scale(1.2);
 }

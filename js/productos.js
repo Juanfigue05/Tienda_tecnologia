@@ -1,53 +1,66 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const filtro = localStorage.getItem("valorDiv_carta");
+    const filtro = sessionStorage.getItem("valorDiv_carta");
     console.log("Div seleccionado:", filtro);
 
-    // Traer la información del JSON en la carpeta otros
-    const url = "./otros/componentes.json";
-    fetch(url)
-        .then(response => response.json())
-        .then(data => {
-            // Acceder al arreglo dentro de la clave "componentes"
-            const productos = data.componentes;
-            
-            // Asegurarse de que cada producto tenga un ID único
-            productos.forEach((producto, index) => {
-                if (!producto.id) {
-                    producto.id = index + 1;
-                }
-            });
+    // Verificar si ya existen productos en el sessionStorage
+    let productos = JSON.parse(sessionStorage.getItem("productos"));
 
-            // Guardar la información en el localStorage
-            localStorage.setItem("productos", JSON.stringify(productos));
-            console.log("Datos guardados en el localStorage:", productos);
+    if (!productos) {
+        // Si no existen productos en el sessionStorage, cargar desde el JSON
+        const url = "./otros/componentes.json";
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                // Acceder al arreglo dentro de la clave "componentes"
+                productos = data.componentes;
 
-            // Mostrar productos según el filtro
-            if (filtro && filtro !== "") {
-                // Marcar el checkbox correspondiente
-                const checkboxes = document.querySelectorAll('.filtro-categoria');
-                checkboxes.forEach(checkbox => {
-                    if (checkbox.value.toLowerCase() === filtro.toLowerCase()) {
-                        checkbox.checked = true; // Marcar el checkbox
+                // Asegurarse de que cada producto tenga un ID único
+                productos.forEach((producto, index) => {
+                    if (!producto.id) {
+                        producto.id = index + 1;
                     }
                 });
 
-                // Filtrar y mostrar los productos del tipo seleccionado
-                console.log("Aplicando filtro automáticamente:", filtro);
-                imprimir_productos([filtro]); // Llamar a la función para mostrar los productos filtrados
-            } else {
-                // Si no hay filtro, mostrar todos los productos
-                console.log("No hay filtro, mostrando todos los productos.");
-                imprimir_productos();
-            }
-        })
-        .catch(error => console.error('Error al cargar el JSON:', error));
+                // Guardar los productos en el sessionStorage
+                sessionStorage.setItem("productos", JSON.stringify(productos));
+                console.log("Datos guardados en el sessionStorage:", productos);
+
+                // Mostrar productos según el filtro
+                mostrarProductosConFiltro(filtro, productos);
+            })
+            .catch(error => console.error('Error al cargar el JSON:', error));
+    } else {
+        // Si ya existen productos en el sessionStorage, usarlos directamente
+        console.log("Productos cargados desde el sessionStorage:", productos);
+        mostrarProductosConFiltro(filtro, productos);
+    }
 });
+
+function mostrarProductosConFiltro(filtro, productos) {
+    if (filtro && filtro !== "") {
+        // Marcar el checkbox correspondiente
+        const checkboxes = document.querySelectorAll('.filtro-categoria');
+        checkboxes.forEach(checkbox => {
+            if (checkbox.value.toLowerCase() === filtro.toLowerCase()) {
+                checkbox.checked = true; // Marcar el checkbox
+            }
+        });
+
+        // Filtrar y mostrar los productos del tipo seleccionado
+        console.log("Aplicando filtro automáticamente:", filtro);
+        imprimir_productos([filtro]); // Llamar a la función para mostrar los productos filtrados
+    } else {
+        // Si no hay filtro, mostrar todos los productos
+        console.log("No hay filtro, mostrando todos los productos.");
+        imprimir_productos();
+    }
+}
 
 // Función para imprimir todos los productos
 function imprimir_productos(filtros = []) {
     const div_mostrar = document.getElementById("productos");
-    const productos = JSON.parse(localStorage.getItem("productos"));
-    console.log("Productos cargados desde localStorage:", productos);
+    const productos = JSON.parse(sessionStorage.getItem("productos"));
+    console.log("Productos cargados desde sessionStorage:", productos);
 
     if (!Array.isArray(productos)) {
         console.error("Error: 'productos' no es un arreglo.");
@@ -55,6 +68,12 @@ function imprimir_productos(filtros = []) {
     }
 
     div_mostrar.innerHTML = "";
+
+    // Recuperar los filtros desde el sessionStorage si no se pasan como argumento
+    if (filtros.length === 0) {
+        const filtrosGuardados = JSON.parse(sessionStorage.getItem('filtrosSeleccionados')) || [];
+        filtros = filtrosGuardados;
+    }
 
     // Filtrar productos si hay filtros activos
     let productosFiltrados = productos;
@@ -98,12 +117,12 @@ function imprimir_productos(filtros = []) {
         // Crear título
         const titulo = document.createElement("h5");
         titulo.className = "card-title";
-        titulo.textContent = `${producto.tipo} - ${producto.marca} - ${producto.modelo}`;
+        titulo.textContent = producto.tipo + " - " + producto.marca + " - " + producto.modelo;
 
         // Crear descripción
         const descripcion = document.createElement("p");
         descripcion.className = "card-text small";
-        descripcion.innerHTML = `Precio: ${formatearPrecio(producto.precio)}<br>Cantidad disponible: ${producto.cantidad}`;
+        descripcion.innerHTML = "Precio: " + formatearPrecio(producto.precio) + "<br>Cantidad disponible: " + producto.cantidad;
 
         // Disponibilidad del producto
         const disponibilidad = document.createElement("span");
@@ -115,7 +134,6 @@ function imprimir_productos(filtros = []) {
             disponibilidad.className = "badge bg-danger";
         }
 
-        // Crear botón para añadir al carrito
         const btnComprar = document.createElement("button");
         btnComprar.className = "btn btn-primary btn-agregar-carrito"; 
         btnComprar.textContent = "Añadir al carrito";
@@ -186,6 +204,9 @@ document.addEventListener('DOMContentLoaded', function() {
 function aplicarFiltros() {
     const checkboxes = document.querySelectorAll('.filtro-categoria:checked');
     const filtros_Seleccionados = Array.from(checkboxes).map(checkbox => checkbox.value); //convierte una colección de checkboxes en un arreglo 
+
+    sessionStorage.setItem('filtrosSeleccionados', JSON.stringify(filtrosSeleccionados));
+
     imprimir_productos(filtros_Seleccionados);
 }
 

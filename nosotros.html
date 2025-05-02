@@ -11,56 +11,104 @@
 </head>
 <body >
     <header>
-      <nav id="navegador" class="navbar navbar-expand-lg">
-          <div class="container-fluid">
-              <!-- Logo siempre visible -->
-              <a class="navbar-brand">
-                  <img src="img/logotipo.png" id="logotipo" alt="Logo" class="d-inline-block align-text-top">
-              </a>
-              
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
-                      data-bs-target="#navbarNav" aria-controls="navbarNav" 
-                      aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-              </button>
-              
-              <!-- Elementos colapsables -->
-              <div class="collapse navbar-collapse" id="navbarNav">
-                  <!-- Menú principal alineado a la izquierda -->
-                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                      <li class="nav-item">
-                          <a class="nav-link" id="opcion_navegador" href="index.html">Inicio</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" id="opcion_navegador" href="productos.html">Productos</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link active" id="opcion_seleccionada" aria-current="page" href="nosotros.html">Sobre nosotros</a>
-                      </li>
-                  </ul>
-                  
-                  <!-- Botones de acción alineados a la derecha -->
-                  <div class="text-center">
-                      <a href="dashboard.html" id="boton_navegador" class="btn btn-dark me-2">Iniciar Sesión</a>
-                      <a id="carrito_compra" class="btn btn-dark" class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
-                        <i class="fa-solid fa-cart-shopping" style="color: #ff5900;"> Carrito</i>
-                    </a>
+        <nav id="navegador" class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <!-- Logo siempre visible -->
+                <a class="navbar-brand">
+                    <img src="img/logotipo.png" id="logotipo" alt="Logo" class="d-inline-block align-text-top">
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                        data-bs-target="#navbarNav" aria-controls="navbarNav" 
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- Elementos colapsables -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <!-- Menú principal alineado a la izquierda -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" id="opcion_navegador" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="opcion_navegador" href="productos.html">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" id="opcion_seleccionada" aria-current="page" href="nosotros.html">Sobre nosotros</a>
+                        </li>
+                    </ul>
+                    
+                    <!-- Botones de acción alineados a la derecha -->
+                    <div class="text-center">
+                        <a href="dashboard.html" id="boton_navegador" class="btn btn-dark me-2">Iniciar Sesión</a>
+                        <a id="carrito_compra" class="btn btn-dark" class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
+                            <i class="fa-solid fa-cart-shopping" style="color: #ff5900;"> Carrito</i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header> 
+  
+    <div class="offcanvas offcanvas-bottom " tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasBottomLabel">Carrito de compra</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body small" id="informacion_compras">
+        
+        </div>
+    </div>
+    
+    <section id="sobre-nosotros" class="py-5">
+        <div class="container">
+            <div class="row text-center mb-4">
+                <div class="col">
+                    <h1 class="titulo-seccion">Sobre Nosotros</h1>
+                    <p class="descripcion-seccion">Conoce más sobre nuestra misión, visión y valores.</p>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center">
+                    <img src="..." alt="Tecnología" class="img-fluid imagen-nosotros">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="subtitulo-seccion">¿Quiénes somos?</h2>
+                    <p class="texto-nosotros">
+                        En <strong>Tecnology Shop</strong>, somos apasionados por la tecnología. Nos dedicamos a ofrecer los mejores productos tecnológicos del mercado, desde dispositivos de última generación hasta accesorios que complementan tu estilo de vida digital.
+                    </p>
+                    <h3 class="subtitulo-seccion">Nuestra misión</h3>
+                    <p class="texto-nosotros">
+                        Brindar soluciones tecnológicas innovadoras que mejoren la vida de nuestros clientes, con un enfoque en calidad, accesibilidad y servicio excepcional.
+                    </p>
+                    <h3 class="subtitulo-seccion">Nuestra visión</h3>
+                    <p class="texto-nosotros">
+                        Ser la tienda líder en tecnología, reconocida por nuestra excelencia en productos y atención al cliente, marcando la diferencia en cada experiencia de compra.
+                    </p>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col text-center">
+                    <h3 class="subtitulo-seccion">Nuestros valores</h3>
+                    <ul class="list-inline valores-nosotros">
+                        <li class="list-inline-item mx-3">
+                            <i class="fa-solid fa-star icono-valor"></i>
+                            <p>Calidad</p>
+                        </li>
+                        <li class="list-inline-item mx-3">
+                            <i class="fa-solid fa-handshake icono-valor"></i>
+                            <p>Confianza</p>
+                        </li>
+                        <li class="list-inline-item mx-3">
+                            <i class="fa-solid fa-rocket icono-valor"></i>
+                            <p>Innovación</p>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </nav>
-  </header> 
-  
-  <div class="offcanvas offcanvas-bottom " tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvasBottomLabel">Carrito de compra</h5>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body small" id="informacion_compras">
-      
-    </div>
-  </div>
-    
+    </section>
 
     <script src="js/carrito_compra.js"></script>
     <script src="js/index.js"></script>

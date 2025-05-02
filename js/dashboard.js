@@ -3,18 +3,13 @@ const boton_consultar_inventario = document.getElementById("boton_consultar_inve
 const boton_informe_ventas = document.getElementById("boton_informe_ventas");
 const boton_agregar_productos = document.getElementById("agregar_producto")
 
-// agregar eventos para mostrar solo lo que necesite el administrador cuando de click
 const ingresar_inventario = document.getElementById("ingresar_inventario");
 const consultar_inventario = document.getElementById("consultar_inventario");
 const informe_ventas = document.getElementById("informe_ventas");
 
-
-//variables de selects
 const tipo = document.getElementById("tipo");
 const marca = document.getElementById("marca");
 const modelo = document.getElementById("modelo");
-
-
 
 ingresar_inventario.style.display = "none";
 consultar_inventario.style.display = "none";
@@ -48,9 +43,9 @@ const url = "./otros/componentes.json";
 fetch(url)
     .then(response => response.json())
     .then(data => {
-        if (!localStorage.getItem("productos")) { // Solo inicializa si no hay datos en localStorage
-            localStorage.setItem("productos", JSON.stringify(data.componentes));
-            console.log("Datos iniciales guardados en localStorage:", data.componentes);
+        if (!sessionStorage.getItem("productos")) { // Solo inicializa si no hay datos en sessionStorage
+            sessionStorage.setItem("productos", JSON.stringify(data.componentes));
+            console.log("Datos iniciales guardados en sessionStorage:", data.componentes);
         }
 
         // Mostrar los datos en consola del JSON
@@ -60,7 +55,7 @@ fetch(url)
     .catch(error => console.error('Error al cargar el JSON:', error));
 
 function imprimir_tipo() {
-    const productos = JSON.parse(localStorage.getItem("productos"));
+    const productos = JSON.parse(sessionStorage.getItem("productos"));
     
     // Crear un Set para almacenar tipos únicos
     const tiposUnicos = new Set();
@@ -92,7 +87,7 @@ function imprimir_tipo() {
 }
 
 function imprimir_marca() {
-    const productos = JSON.parse(localStorage.getItem("productos"));
+    const productos = JSON.parse(sessionStorage.getItem("productos"));
 
     marca.innerHTML='<option value="">-- Seleccione la marca --</option>';
 
@@ -122,7 +117,7 @@ function imprimir_marca() {
 
 
 function imprimir_modelo() {
-    const productos = JSON.parse(localStorage.getItem("productos"));
+    const productos = JSON.parse(sessionStorage.getItem("productos"));
     
     //opcion inicial
     modelo.innerHTML='<option value="">-- Seleccione el modelo --</option>';
@@ -153,7 +148,7 @@ function imprimir_modelo() {
 boton_agregar_productos.addEventListener('click', function(event) {
     event.preventDefault(); // Prevenir que la página se recargue
 
-    const productos = JSON.parse(localStorage.getItem("productos"));
+    const productos = JSON.parse(sessionStorage.getItem("productos"));
     const cantidadagregar = document.getElementById("cantidad").value; // Obtener el valor de la cantidad
     for (let i = 0; i < productos.length; i++) {
         const producto = productos[i];
@@ -165,17 +160,64 @@ boton_agregar_productos.addEventListener('click', function(event) {
         }
     }
 
-    // Guardar el arreglo actualizado en el localStorage
-    localStorage.setItem("productos", JSON.stringify(productos));
-    console.log("Productos actualizados guardados en localStorage:", productos);
+    // Guardar el arreglo actualizado en el sessionStorage
+    sessionStorage.setItem("productos", JSON.stringify(productos));
+    console.log("Productos actualizados guardados en sessionStorage:", productos);
 
     // Actualizar la tabla después de guardar
     imprimir_productos();
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    // Obtener las ventas desde sessionStorage
+    const ventas = JSON.parse(sessionStorage.getItem('ventas')) || [];
+    const informeVentasTabla = document.getElementById('informe_ventas_tabla');
+    const totalGananciaElemento = document.getElementById('total_vendido');
+
+    let totalGanancia = 0;
+
+    informeVentasTabla.innerHTML = '';
+
+    ventas.forEach((venta, index) => {
+        const fila = document.createElement('tr');
+        const columnaNumero = document.createElement('td');
+        const columnaProducto = document.createElement('td');
+        const columnaCantidad = document.createElement('td');
+        const columnaSubtotal = document.createElement('td');
+        const columnaFecha = document.createElement('td');
+        
+        columnaNumero.textContent = "Venta - " + venta.numeroVenta;
+        columnaProducto.textContent = venta.tipo + " / " + venta.marca + " / " + venta.modelo;
+        columnaCantidad.textContent = venta.cantidad;
+        columnaSubtotal.textContent = formatearPrecio(venta.subtotal);
+        columnaFecha.textContent = venta.fecha + " / " + venta.hora;
+
+        fila.appendChild(columnaNumero);
+        fila.appendChild(columnaProducto);
+        fila.appendChild(columnaCantidad);
+        fila.appendChild(columnaSubtotal);
+        fila.appendChild(columnaFecha);
+
+        informeVentasTabla.appendChild(fila);
+
+        totalGanancia += venta.subtotal;
+    });
+    totalGananciaElemento.textContent = formatearPrecio(totalGanancia);
+
+    sessionStorage.setItem('totalGanancia', totalGanancia.toString());
+});
+
+// Función para formatear el precio
+function formatearPrecio(precio) {
+    return precio.toLocaleString('es-CL', {
+        style: 'currency',
+        currency: 'COP'
+    });
+}
+
 function imprimir_productos() {
     const tabla = document.getElementById("inventario_tabla");
-    const productos = JSON.parse(localStorage.getItem("productos"));
+    const productos = JSON.parse(sessionStorage.getItem("productos"));
 
     console.log("Productos:", productos);
 
